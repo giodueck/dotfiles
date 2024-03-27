@@ -1,5 +1,7 @@
 # Created by newuser for 5.9
 
+export LC_ALL="C"
+
 ## Custom
 alias vim=nvim
 
@@ -40,6 +42,13 @@ export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:3:hidden:wrap
   --bind 'ctrl-/:toggle-preview'
 "
+# # Tokyonight colorscheme
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+# --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
+# --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
+# --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
+# --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=dark
 --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
