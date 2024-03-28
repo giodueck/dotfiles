@@ -20,6 +20,12 @@ dirsize() {
     du -sh "$1" | sort -h
 }
 
+# Minecraft launcher (AUR) won't launch from the desktop as the prime-run application
+# for some reason, but it will when executing `zsh -c`
+minecraft() {
+    prime-run minecraft-launcher
+}
+
 # Git shortcuts
 alias gs="git status"
 alias ga="git add"
