@@ -53,6 +53,7 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '!'
 zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git*' actionformats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%u%c|%{${fg[red]}%}%a%{${fg[cyan]}%}]%{$reset_color%}"
 zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
 
 ## Add newline to have consistent prompt start column
