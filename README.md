@@ -1,5 +1,8 @@
 # My dotfiles
 
+## [Nvim configs](https://github.com/giodueck/nvim)
+Merge to this repo pending.
+
 ## tmux.conf
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
 and [a guide to customizing your tmux.conf](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/).
