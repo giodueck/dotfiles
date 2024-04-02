@@ -13,3 +13,4 @@ fi
 cp -v .local/share/fzf/key-bindings.zsh ~/.local/share/fzf/key-bindings.zsh
 
 cp -v .config/tmux/tmux.conf ~/.config/tmux/tmux.conf
+cp -v .config/tmux/tokyonight_night.tmux ~/.config/tmux/tokyonight_night.tmux

@@ -1,11 +1,10 @@
-# Created by newuser for 5.9
-
 export LC_ALL="C"
 
-## Custom
+# Aliases for launching programs
 alias vim=nvim
 alias tmux="tmux -u"
 
+# Custom functions
 # Memory usage by a single process
 memuse() {
     smem -c pss -P "$1" -k -t | tail -n 1
@@ -41,6 +40,24 @@ alias glo="git log --oneline"
 alias gd="git diff"
 alias gca="git commit -S --amend"
 
+# GPG Key
+GPG_TTY=$(tty)
+export GPG_TTY
+
+# ZSH specific
+
+# Tweak grml zsh config (https://www.pedaldrivenprogramming.com/2018/09/customize-grml-zsh-config/)
+## Better git info, get rid of (git)- since there is no svn to be found here
+autoload -U colors && colors
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
+
+## Forgo user@host, add newline to have consistent prompt start column
+zstyle ':prompt:grml:left:setup' items rc change-root path vcs newline percent
+
 # Zoxide
 eval "$(zoxide init zsh)"
 alias cd=z
@@ -51,22 +68,18 @@ export FZF_CTRL_R_OPTS="
   --bind 'ctrl-/:toggle-preview'
 "
 # # Tokyonight colorscheme
-# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-# --color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
-# --color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
-# --color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
-# --color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+--color=fg:#c0caf5,bg:#1a1b26,hl:#ff9e64 \
+--color=fg+:#c0caf5,bg+:#292e42,hl+:#ff9e64 \
+--color=info:#7aa2f7,prompt:#7dcfff,pointer:#7dcfff \
+--color=marker:#9ece6a,spinner:#9ece6a,header:#9ece6a"
 
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
---color=dark
---color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
---color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
-'
+# export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+# --color=dark
+# --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
+# --color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
+# '
 source ~/.local/share/fzf/key-bindings.zsh
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# GPG Key
-GPG_TTY=$(tty)
-export GPG_TTY
