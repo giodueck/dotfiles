@@ -4,6 +4,7 @@ export LC_ALL="C"
 
 ## Custom
 alias vim=nvim
+alias tmux="tmux -u"
 
 # Memory usage by a single process
 memuse() {
@@ -38,6 +39,7 @@ alias gsw="git switch"
 alias gl="git log"
 alias glo="git log --oneline"
 alias gd="git diff"
+alias gca="git commit -S --amend"
 
 # Zoxide
 eval "$(zoxide init zsh)"

@@ -6,7 +6,10 @@
 # Move relevant dotfiles into home (~)
 
 cp -v .zshrc ~/.zshrc
+
 if [ ! -d ~/.local/share/fzf ]; then
     mkdir -p ~/.local/share/fzf
 fi
 cp -v .local/share/fzf/key-bindings.zsh ~/.local/share/fzf/key-bindings.zsh
+
+cp -v .config/tmux/tmux.conf ~/.config/tmux/tmux.conf
