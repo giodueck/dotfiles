@@ -19,6 +19,7 @@ Zsh config based on the Arch installer image and customized from there.
 - [nvidia-prime](https://archlinux.org/packages/extra/any/nvidia-prime/) (optional)
 - [smem](https://www.selenic.com/smem/) (optional)
 - [tmux](https://github.com/tmux/tmux) (optional)
+- [tpm](https://github.com/tmux-plugins/tpm) (optional)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
