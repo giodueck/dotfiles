@@ -30,6 +30,7 @@ vault-backup() {
     if [[ "$PWD" == *Obsidian* ]]; then
         git add -A
         git commit -m 'vault backup'
+        [[ "$?" == "0" ]] && git push
     else
         echo "Not inside an Obsidian vault"
         return 1
