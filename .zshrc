@@ -26,6 +26,16 @@ minecraft() {
     prime-run minecraft-launcher
 }
 
+vault-backup() {
+    if [[ "$PWD" == *Obsidian* ]]; then
+        git add -A
+        git commit -m 'vault backup'
+    else
+        echo "Not inside an Obsidian vault"
+        return 1
+    fi
+}
+
 # Git shortcuts
 alias gs="git status"
 alias ga="git add"
