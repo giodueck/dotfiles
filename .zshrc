@@ -1,4 +1,5 @@
 export LC_ALL="C"
+export EDITOR="nvim"
 
 # Aliases for launching programs
 alias vim=nvim
