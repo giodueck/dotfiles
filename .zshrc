@@ -68,6 +68,8 @@ zstyle ':vcs_info:*' stagedstr '+'
 zstyle ':vcs_info:git*' actionformats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%u%c|%{${fg[red]}%}%a%{${fg[cyan]}%}]%{$reset_color%}"
 zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
 
+zstyle ':prompt:grml:*:items:path' pre "%{${fg[blue]}%}%B"
+
 ## Add newline to have consistent prompt start column
 zstyle ':prompt:grml:left:setup' items rc user at host change-root path vcs newline percent
 
