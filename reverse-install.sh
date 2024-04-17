@@ -13,3 +13,6 @@ cp -v ~/.config/tmux/tokyonight_night.tmux .config/tmux/tokyonight_night.tmux
 
 mkdir -p .config/alacritty
 cp -v ~/.config/alacritty/alacritty.toml .config/alacritty/alacritty.toml
+
+mkdir -p .config/zathura
+cp -v ~/.config/zathura/zathurarc .config/zathura/zathurarc

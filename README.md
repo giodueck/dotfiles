@@ -1,15 +1,22 @@
 # My dotfiles
 
+## Alacritty
+Lightly customized for an unintrusive, fast console.
+
 ## [Nvim configs](https://github.com/giodueck/nvim)
 Merge to this repo pending.
 
-## tmux.conf
+Theming all around adapted from the excellent [TokyoNight.nvim](https://github.com/folke/tokyonight.nvim) by folke, which includes extras for all these configs.
+
+## Tmux
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
 and [a guide to customizing your tmux.conf](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/).
 
 ### Dependencies
-- [tmux](https://github.com/tmux/tmux)
 - [tpm](https://github.com/tmux-plugins/tpm)
+
+## Zathura
+Document viewer with vi-style keymaps.
 
 ## .zshrc
 Zsh config based on the Arch installer image and customized from there.
