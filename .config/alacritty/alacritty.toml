@@ -17,7 +17,8 @@ hide_when_typing = true
 
 [keyboard]
 bindings = [
-    { key = "F11", action = "ToggleFullscreen" }
+    { key = "F11", action = "ToggleFullscreen" },
+    { key = "Backspace", mods = "Control", chars = "\u0017" }
 ]
 
 # TokyoNight Alacritty Colors
