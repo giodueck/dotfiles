@@ -1,4 +1,4 @@
-export LC_ALL="C"
+export LC_ALL="C.utf-8"
 export EDITOR="nvim"
 
 # Aliases for launching programs
