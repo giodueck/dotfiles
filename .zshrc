@@ -3,6 +3,7 @@ export EDITOR="nvim"
 
 # Aliases for launching programs
 alias vim=nvim
+alias nv=nvim
 alias tmux="tmux -u"
 
 # Custom functions
@@ -51,6 +52,7 @@ alias gl="git log"
 alias glo="git log --oneline"
 alias gd="git diff"
 alias gca="git commit -S --amend"
+alias gch="git checkout"
 
 # GPG Key
 GPG_TTY=$(tty)
