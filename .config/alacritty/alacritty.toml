@@ -9,6 +9,9 @@ TERM = "xterm-256color"
 normal = { family = "Hack Nerd Font Mono", style = "Regular" }
 size = 10
 
+[terminal]
+osc52 = "OnlyCopy"
+
 [cursor]
 style = { shape = "Block", blinking = "On" }
 
