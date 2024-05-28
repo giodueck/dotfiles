@@ -22,7 +22,9 @@ hide_when_typing = true
 bindings = [
     { key = "F11", action = "ToggleFullscreen" },
     { key = "Backspace", mods = "Control", chars = "\u0017" },
-    { key = "NumpadEnter", chars = "\r" }
+    { key = "NumpadEnter", chars = "\r" },
+    { key = "Return", mods = "Shift", chars = "\u001B[13;2u" },
+    { key = "Return", mods = "Control", chars = "\u001B[13;5u" }
 ]
 
 # TokyoNight Alacritty Colors
