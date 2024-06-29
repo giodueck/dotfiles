@@ -28,6 +28,8 @@ minecraft() {
     prime-run minecraft-launcher
 }
 
+# git add every change, commit them, then git push. Like the Obsidian Git plugin for the
+# Obsidian app
 vault-backup() {
     if [[ "$PWD" == *Obsidian* ]]; then
         git add -A
@@ -37,6 +39,15 @@ vault-backup() {
         echo "Not inside an Obsidian vault"
         return 1
     fi
+}
+
+# Ping an address until it responds. Useful for connection punch-through, e.g. between zerotier
+# clients in a common network
+punch() {
+    while ! ping -c 1 "$1" &>/dev/null; do
+        echo -n .
+    done
+    echo "done"
 }
 
 # Git shortcuts
