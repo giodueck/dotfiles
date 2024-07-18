@@ -8,6 +8,22 @@ Merge to this repo pending.
 
 Theming all around adapted from the excellent [TokyoNight.nvim](https://github.com/folke/tokyonight.nvim) by folke, which includes extras for all these configs.
 
+## Hyprland
+Modern tiling WM based on wlroots.
+
+### Dependencies
+- hyprland
+- swaync (notification daemon)
+- pipewire
+- wireplumber
+- xdg-desktop-portal
+- xdg-desktop-portal-hyprland
+- xdg-desktop-portal-kde
+- polkit
+- polkit-kde-agent
+- qt5-wayland
+- qt6-wayland
+
 ## Tmux
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
 and [a guide to customizing your tmux.conf](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/).

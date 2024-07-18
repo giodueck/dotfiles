@@ -19,3 +19,8 @@ cp -v .config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 mkdir -p ~/.config/zathura
 cp -v .config/zathura/zathurarc ~/.config/zathura/zathurarc
+
+mkdir -p ~/.config/hypr
+cp -v .config/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+mkdir -p ~/.config/xdg-desktop-portal
+cp -v .config/xdg-desktop-portal/hyprland-portals.conf ~/.config/xdg-desktop-portal/hyprland-portals.conf
