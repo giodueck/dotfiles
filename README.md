@@ -11,6 +11,16 @@ Theming all around adapted from the excellent [TokyoNight.nvim](https://github.c
 ## Hyprland
 Modern tiling WM based on wlroots.
 
+### TODO
+- [ ] Check that camera/microphone work
+- [ ] Check that screen-sharing works
+- [ ] Check bluetooth/wifi settings
+- [ ] Lock screen
+- [ ] Status bar
+- [ ] Hyprland theming and animations
+- [ ] Rofi theme
+- [ ] Make apps (dolphin) use dark theme
+
 ### Dependencies
 - hyprland
 - swaync (notification daemon)
@@ -19,10 +29,12 @@ Modern tiling WM based on wlroots.
 - xdg-desktop-portal
 - xdg-desktop-portal-hyprland
 - xdg-desktop-portal-kde
+- dolphin
 - polkit
 - polkit-kde-agent
 - qt5-wayland
 - qt6-wayland
+- rofi-wayland
 
 ## Tmux
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
