@@ -16,7 +16,7 @@ Modern tiling WM based on wlroots.
 - [x] Rofi theme
 - [x] Make apps (dolphin) use dark theme
 - [x] Lock screen
-    - [ ] Idle screen lock
+    - [x] Idle screen lock
     - [ ] Rice lock screen
 - [x] Status bar
     - [ ] KDE Connect
@@ -24,6 +24,7 @@ Modern tiling WM based on wlroots.
 - [ ] Check that screen-sharing works
 - [ ] Hyprland theming and animations
 - [ ] Screenshots
+- [ ] Break out individual components: waybar, rofi, etc
 
 ### Dependencies
 - hyprland
@@ -50,8 +51,6 @@ Modern tiling WM based on wlroots.
 - hyprlock
 - hypridle
 - brightnessctl
-
-### Waybar
 
 ## Tmux
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
