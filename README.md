@@ -6,25 +6,28 @@ Lightly customized for an unintrusive, fast console.
 ## [Nvim configs](https://github.com/giodueck/nvim)
 Merge to this repo pending.
 
-Theming all around adapted from the excellent [TokyoNight.nvim](https://github.com/folke/tokyonight.nvim) by folke, which includes extras for all these configs.
+Theming all around adapted from the excellent [TokyoNight.nvim](https://github.com/folke/tokyonight.nvim) by folke, which includes extras for some of these configs.
 
 ## Hyprland
 Modern tiling WM based on wlroots.
 
 ### TODO
-- [ ] Check that camera/microphone work
-- [ ] Check that screen-sharing works
 - [x] Check bluetooth/wifi settings
-- [ ] Lock screen
-- [x] Status bar
-    - [ ] KDE Connect
-- [ ] Hyprland theming and animations
 - [x] Rofi theme
 - [x] Make apps (dolphin) use dark theme
+- [x] Lock screen
+    - [ ] Idle screen lock
+    - [ ] Rice lock screen
+- [x] Status bar
+    - [ ] KDE Connect
+- [ ] Check that camera/microphone work
+- [ ] Check that screen-sharing works
+- [ ] Hyprland theming and animations
+- [ ] Screenshots
 
 ### Dependencies
 - hyprland
-- swaync (notification daemon)
+- swaync
 - pipewire
 - wireplumber
 - xdg-desktop-portal
@@ -44,6 +47,9 @@ Modern tiling WM based on wlroots.
 - networkmanager
 - playerctl
 - hyprpaper
+- hyprlock
+- hypridle
+- brightnessctl
 
 ### Waybar
 
