@@ -14,12 +14,13 @@ Modern tiling WM based on wlroots.
 ### TODO
 - [ ] Check that camera/microphone work
 - [ ] Check that screen-sharing works
-- [ ] Check bluetooth/wifi settings
+- [x] Check bluetooth/wifi settings
 - [ ] Lock screen
-- [ ] Status bar
+- [x] Status bar
+    - [ ] KDE Connect
 - [ ] Hyprland theming and animations
-- [ ] Rofi theme
-- [ ] Make apps (dolphin) use dark theme
+- [x] Rofi theme
+- [x] Make apps (dolphin) use dark theme
 
 ### Dependencies
 - hyprland
@@ -34,7 +35,17 @@ Modern tiling WM based on wlroots.
 - polkit-kde-agent
 - qt5-wayland
 - qt6-wayland
+- qt5ct
+- qt6ct
 - rofi-wayland
+- waybar
+- pavucontrol
+- bluez-utils
+- networkmanager
+- playerctl
+- hyprpaper
+
+### Waybar
 
 ## Tmux
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
