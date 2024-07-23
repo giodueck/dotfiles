@@ -20,6 +20,7 @@ Modern tiling WM based on wlroots.
     - [ ] Rice lock screen
 - [x] Status bar
     - [ ] KDE Connect
+- [x] Hyprland media keys
 - [ ] Check that camera/microphone work
 - [ ] Check that screen-sharing works
 - [ ] Hyprland theming and animations
