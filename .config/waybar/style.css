@@ -64,12 +64,12 @@ window#waybar.hidden {
 #mode,
 #idle_inhibitor,
 #mpd,
+#mpris,
 #bluetooth,
 #keyboard-state,
 #power-profiles-daemon,
 #custom-hyprPicker,
-#custom-power-menu,
-#custom-spotify {
+#custom-power-menu, {
   padding: 0 4px;
   color: #e5e5e5;
   /* color: #bf616a; */
@@ -280,7 +280,7 @@ label:focus {
   color: #7dcfff;
 }
 
-#custom-spotify {
+#mpris.spotify {
   padding: 0 10px;
   margin: 0 4px;
   /* background-color: #1db954; */

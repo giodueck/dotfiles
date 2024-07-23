@@ -17,7 +17,7 @@
         "custom/weather"
     ],
     "modules-center": [
-        "custom/spotify"
+        "mpris"
     ],
     "modules-right": [
         "tray",
@@ -192,5 +192,29 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "format-paused": "{player_icon} {status_icon} {title} - {artist}",
+        "tooltip-format": "{player_icon} {player} - {status_icon} {status}\n{title} - {artist} - {album}\n{position}/{length}",
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "mpv": "󰐹",
+            "vlc": "󰕼",
+            "firefox": "󰈹",
+            "chromium": "",
+            "kdeconnect": "󰄜",
+            "mopidy": ""
+        },
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "stopped": ""
+        },
+        "ignored-players": ["firefox", "chromium"],
+        "interval": 3,
+        "ellipsis": "…",
+        "max-length": 30
     }
 }
