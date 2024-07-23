@@ -33,6 +33,7 @@ Modern tiling WM based on wlroots.
 - [ ] Break out individual components: waybar, rofi, etc
 
 ### Dependencies
+- archlinux-xdg-menu
 - bluez-utils
 - brightnessctl
 - dolphin
