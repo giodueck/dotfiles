@@ -21,6 +21,7 @@ Modern tiling WM based on wlroots.
 - [x] Status bar
     - [ ] KDE Connect
 - [x] Hyprland media keys
+- [x] Kill or minimize (Steam)
 - [ ] Check that camera/microphone work
 - [ ] Check that screen-sharing works
 - [ ] Hyprland theming and animations
