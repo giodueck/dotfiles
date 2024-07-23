@@ -17,42 +17,46 @@ Modern tiling WM based on wlroots.
 - [x] Make apps (dolphin) use dark theme
 - [x] Lock screen
     - [x] Idle screen lock
+    - [ ] Lock on laptop lid close
     - [ ] Rice lock screen
 - [x] Status bar
     - [ ] KDE Connect
+    - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled)
 - [x] Hyprland media keys
 - [x] Kill or minimize (Steam)
+- [ ] Test powermenu.sh
 - [ ] Check that camera/microphone work
 - [ ] Check that screen-sharing works
 - [ ] Hyprland theming and animations
 - [ ] Screenshots
+- [ ] Custom wallpaper manager
 - [ ] Break out individual components: waybar, rofi, etc
 
 ### Dependencies
+- bluez-utils
+- brightnessctl
+- dolphin
+- hypridle
 - hyprland
-- swaync
+- hyprlock
+- hyprpaper
+- networkmanager
+- pavucontrol
 - pipewire
+- playerctl
+- polkit
+- polkit-kde-agent
+- qt5-wayland
+- qt5ct
+- qt6-wayland
+- qt6ct
+- rofi-wayland
+- swaync
+- waybar
 - wireplumber
 - xdg-desktop-portal
 - xdg-desktop-portal-hyprland
 - xdg-desktop-portal-kde
-- dolphin
-- polkit
-- polkit-kde-agent
-- qt5-wayland
-- qt6-wayland
-- qt5ct
-- qt6ct
-- rofi-wayland
-- waybar
-- pavucontrol
-- bluez-utils
-- networkmanager
-- playerctl
-- hyprpaper
-- hyprlock
-- hypridle
-- brightnessctl
 
 ## Tmux
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)

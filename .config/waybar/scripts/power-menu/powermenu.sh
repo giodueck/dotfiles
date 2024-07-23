@@ -57,8 +57,8 @@ run_cmd() {
     elif [[ $1 == '--reboot' ]]; then
       systemctl reboot
     elif [[ $1 == '--suspend' ]]; then
-      mpc -q pause
-      amixer set Master mute
+      playerctl pause
+      pactl set-sink-mute @DEFAULT_SINK@ toggle
       systemctl suspend
     elif [[ $1 == '--logout' ]]; then
       if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
@@ -93,7 +93,7 @@ case $chosen in
     elif [[ -x '/usr/bin/i3lock' ]]; then
       i3lock
     elif [[ -x '/usr/bin/Hyprland' ]]; then
-      swaylock
+      hyprlock --immediate
     fi
     ;;
   $suspend)
