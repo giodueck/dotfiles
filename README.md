@@ -24,7 +24,7 @@ Modern tiling WM based on wlroots.
     - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled)
 - [x] Hyprland media keys
 - [x] Kill or minimize (Steam)
-- [ ] Test powermenu.sh
+- [x] Test powermenu.sh
 - [ ] Check that camera/microphone work
 - [ ] Check that screen-sharing works
 - [ ] Hyprland theming and animations

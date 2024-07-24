@@ -46,7 +46,8 @@ window#waybar.hidden {
   /* border-radius: 20px; */
   /* padding-left: 10px; */
   /* padding-right: 10px; */
-  color: #64727d;
+  padding: 0 5px;
+  color: #a9b1d6;
 }
 
 #clock,
@@ -69,7 +70,7 @@ window#waybar.hidden {
 #keyboard-state,
 #power-profiles-daemon,
 #custom-hyprPicker,
-#custom-power-menu, {
+#custom-power-menu {
   padding: 0 4px;
   color: #e5e5e5;
   /* color: #bf616a; */
@@ -264,7 +265,6 @@ label:focus {
 #keyboard-state {
   color: #aaaaaa;
   padding: 0 0px;
-  margin: 0 5px;
   min-width: 16px;
 }
 
@@ -279,37 +279,5 @@ label:focus {
 #mpris.spotify {
   padding: 0 10px;
   margin: 0 4px;
-  /* background-color: #1db954; */
   color: #9ece6a;
 }
-
-/* #custom-weather.severe { */
-/*   color: #eb937d; */
-/* } */
-/**/
-/* #custom-weather.sunnyDay { */
-/*   color: #c2ca76; */
-/* } */
-/**/
-/* #custom-weather.clearNight { */
-/*   color: #cad3f5; */
-/* } */
-/**/
-/* #custom-weather.cloudyFoggyDay, */
-/* #custom-weather.cloudyFoggyNight { */
-/*   color: #c2ddda; */
-/* } */
-/**/
-/* #custom-weather.rainyDay, */
-/* #custom-weather.rainyNight { */
-/*   color: #5aaca5; */
-/* } */
-/**/
-/* #custom-weather.showyIcyDay, */
-/* #custom-weather.snowyIcyNight { */
-/*   color: #d6e7e5; */
-/* } */
-/**/
-/* #custom-weather.default { */
-/*   color: #dbd9d8; */
-/* } */

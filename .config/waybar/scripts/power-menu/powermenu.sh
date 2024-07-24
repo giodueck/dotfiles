@@ -58,7 +58,6 @@ run_cmd() {
       systemctl reboot
     elif [[ $1 == '--suspend' ]]; then
       playerctl pause
-      pactl set-sink-mute @DEFAULT_SINK@ toggle
       systemctl suspend
     elif [[ $1 == '--logout' ]]; then
       if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then

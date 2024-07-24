@@ -14,7 +14,7 @@
         "temperature",
         "power-profiles-daemon",
         "memory",
-        "custom/weather"
+        "hyprland/window"
     ],
     "modules-center": [
         "mpris"
@@ -25,7 +25,8 @@
         "pulseaudio",
         // "custom/kdeconnect", // TODO
         "bluetooth",
-        "network",
+        "network#wlan0",
+        "network#enp3s0",
         "battery",
         "keyboard-state",
         "clock",
@@ -50,6 +51,12 @@
             "focused": "",
             "default": ""
         }
+    },
+    "hyprland/window": {
+        "format": "{initialTitle}",
+        "icon": true,
+        "icon-size": 16,
+        "separate-outputs": true
     },
     "tray": {
         "spacing": 10
@@ -97,13 +104,20 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-    "network": {
+    "network#wlan0": {
+        "interface": "wlan0",
+        "interval": 2,
         "format-wifi": "󰖩",
-        "tooltip-format-wifi": "󰖩 {essid} {signalStrength}%",
-        "format-ethernet": "󰈀",
-        "tooltip-format-ethernet": "󰈀 {ipaddr}",
+        "tooltip-format-wifi": "󰖩 {essid} {signalStrength}%\n󰇚{bandwidthDownBytes:>4}  󰕒{bandwidthUpBytes:>4}",
         "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
-        "format-disconnected": "󰀦"
+        "format-disconnected": ""
+    },
+    "network#enp3s0": {
+        "interface": "enp3s0",
+        "interval": 2,
+        "format-ethernet": "󰈀",
+        "tooltip-format-ethernet": "󰈀 {ipaddr}\n󰇚{bandwidthDownBytes}  󰕒{bandwidthUpBytes}",
+        "format-disconnected": ""
     },
 
     "pulseaudio": {
