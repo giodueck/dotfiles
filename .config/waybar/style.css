@@ -30,6 +30,10 @@ window#waybar.hidden {
   border-radius: 0;
 }
 
+#workspaces button.empty {
+  color: #3b4261;
+}
+
 #workspaces button.focused {
   color: #7dcfff;
 }
@@ -48,6 +52,10 @@ window#waybar.hidden {
   /* padding-right: 10px; */
   padding: 0 5px;
   color: #a9b1d6;
+}
+
+window#waybar.empty #window {
+  opacity: 0;
 }
 
 #clock,

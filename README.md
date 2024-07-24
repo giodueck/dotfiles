@@ -17,7 +17,7 @@ Modern tiling WM based on wlroots.
 - [x] Make apps (dolphin) use dark theme
 - [x] Lock screen
     - [x] Idle screen lock
-    - [ ] Lock on laptop lid close
+    - [x] Lock on laptop lid close
     - [ ] Rice lock screen
 - [x] Status bar
     - [ ] KDE Connect
@@ -25,7 +25,7 @@ Modern tiling WM based on wlroots.
 - [x] Hyprland media keys
 - [x] Kill or minimize (Steam)
 - [x] Test powermenu.sh
-- [ ] Check that camera/microphone work
+- [x] Check that camera/microphone work
 - [ ] Check that screen-sharing works
 - [ ] Hyprland theming and animations
 - [ ] Screenshots
