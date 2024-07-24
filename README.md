@@ -31,15 +31,16 @@ Modern tiling WM based on wlroots.
 - [x] Kill or minimize (Steam)
 - [x] Test powermenu.sh
 - [x] Check that camera/microphone work
-- [ ] Check that screen-sharing works
+- [x] Check that screen-sharing works
+- [x] Screenshots
+    - [ ] Notifications
 - [ ] Hyprland theming and animations
-- [ ] Screenshots
 - [ ] Custom wallpaper manager
 - [ ] Break out individual components: waybar, rofi, etc
 
 ### Dependencies
 ```
-pacman -S archlinux-xdg-menu bluez-utils brightnessctl dolphin hypridle hyprland hyprlock hyprpaper networkmanager pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland swaync waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde
+pacman -S archlinux-xdg-menu bluez-utils brightnessctl dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde
 ```
 
 ## Tmux
