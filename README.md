@@ -34,7 +34,7 @@ Modern tiling WM based on wlroots.
 - [x] Check that screen-sharing works
 - [x] Screenshots
     - [x] Notifications
-- [ ] Hyprland theming and animations
+- [x] Hyprland theming and animations
 - [ ] Custom wallpaper manager
 - [ ] Break out individual components: waybar, rofi, etc
 
