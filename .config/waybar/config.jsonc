@@ -56,10 +56,16 @@
         }
     },
     "hyprland/window": {
-        "format": "{initialTitle}",
+        "format": "{}",
         "icon": true,
         "icon-size": 16,
-        "separate-outputs": true
+        "separate-outputs": true,
+        "max-length": 50,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "Firefox",
+            "(.*) - Chromium": "Chromium",
+            "(.*)@(.*): (.*)": "$3"
+        }
     },
     "tray": {
         "spacing": 10
