@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="~/.config/waybar/scripts/power-menu/"
+dir="$HOME/.config/waybar/scripts/power-menu/"
 theme='style'
 
 # CMDs
@@ -12,7 +12,7 @@ host=$(cat /etc/hostname)
 shutdown='󰐥  Shutdown'
 reboot='󰜉  Reboot'
 lock='  Lock'
-suspend='  Suspend'
+suspend='  Suspend'
 logout='󰭑  Logout'
 yes='󰸞  Yes'
 no='󰅖  No'
@@ -68,8 +68,8 @@ run_cmd() {
         i3-msg exit
       elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
         qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-      elif [[ "$DESKTOP_SESSION" == 'Hyprland' ]]; then
-        hyprctl dispatch exit 1
+      elif [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+        hyprctl dispatch exit
       fi
     fi
   else
@@ -80,13 +80,13 @@ run_cmd() {
 # Actions
 chosen="$(run_rofi)"
 case $chosen in
-  $shutdown)
+  "$shutdown")
     run_cmd --shutdown
     ;;
-  $reboot)
+  "$reboot")
     run_cmd --reboot
     ;;
-  $lock)
+  "$lock")
     if [[ -x '/usr/bin/betterlockscreen' ]]; then
       betterlockscreen -l
     elif [[ -x '/usr/bin/i3lock' ]]; then
@@ -95,10 +95,10 @@ case $chosen in
       hyprlock --immediate
     fi
     ;;
-  $suspend)
+  "$suspend")
     run_cmd --suspend
     ;;
-  $logout)
+  "$logout")
     run_cmd --logout
     ;;
 esac
