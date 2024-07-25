@@ -15,6 +15,11 @@ configuration {
     display-window:             " ";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
+
+    /* Highlight an entry under the mouse pointer, accept with LMB */
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
 }
 
 /*****----- Global Properties -----*****/
