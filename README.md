@@ -33,7 +33,7 @@ Modern tiling WM based on wlroots.
 - [x] Check that camera/microphone work
 - [x] Check that screen-sharing works
 - [x] Screenshots
-    - [ ] Notifications
+    - [x] Notifications
 - [ ] Hyprland theming and animations
 - [ ] Custom wallpaper manager
 - [ ] Break out individual components: waybar, rofi, etc
