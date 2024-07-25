@@ -217,6 +217,7 @@
             "mpv": "󰐹",
             "vlc": "󰕼",
             "firefox": "󰈹",
+            "plasma-browser-integration": "󰈹",
             "chromium": "",
             "kdeconnect": "󰄜",
             "mopidy": ""
@@ -226,7 +227,7 @@
             "playing": "",
             "stopped": ""
         },
-        "ignored-players": ["firefox", "chromium"],
+        "ignored-players": [],
         "interval": 3,
         "ellipsis": "…",
         "max-length": 30

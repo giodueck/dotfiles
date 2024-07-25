@@ -289,3 +289,13 @@ label:focus {
   margin: 0 4px;
   color: #9ece6a;
 }
+#mpris.firefox {
+  padding: 0 10px;
+  margin: 0 4px;
+  color: #ff9e64;
+}
+#mpris.plasma-browser-integration {
+  padding: 0 10px;
+  margin: 0 4px;
+  color: #ff9e64;
+}
