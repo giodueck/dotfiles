@@ -8,6 +8,7 @@
     "margin-right": 4,
     "spacing": 4, // Gaps between modules
     "reload_style_on_change": true,
+    "include": "~/.config/waybar/cpu.jsonc",
     "modules-left": [
         "hyprland/workspaces",
         "cpu",
@@ -24,7 +25,7 @@
         "backlight",
         "pulseaudio",
         // "custom/kdeconnect", // TODO
-        "bluetooth",
+//        "bluetooth",
         "network#wlan0",
         "network#enp3s0",
         "battery",
@@ -78,20 +79,6 @@
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
     },
 
-    "cpu": {
-        "interval": 1,
-        "format":" {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}",
-        "format-icons": [
-            "<span color='#69ff94'>▁</span>", // green
-            "<span color='#2aa9ff'>▂</span>", // blue
-            "<span color='#f8f8f2'>▃</span>", // white
-            "<span color='#f8f8f2'>▄</span>", // white
-            "<span color='#ffffa5'>▅</span>", // yellow
-            "<span color='#ffffa5'>▆</span>", // yellow
-            "<span color='#ff9977'>▇</span>", // orange
-            "<span color='#dd532e'>█</span>"  // red
-        ]
-    },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",

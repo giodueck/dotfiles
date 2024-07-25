@@ -27,6 +27,7 @@ Modern tiling WM based on wlroots.
 - [x] Status bar
     - [ ] KDE Connect
     - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled)
+    - [x] Script to detect how many CPUs there are, and whether to enable the bluetooth module
 - [x] Hyprland media keys
 - [x] Kill or minimize (Steam)
 - [x] Test powermenu.sh
@@ -41,6 +42,12 @@ Modern tiling WM based on wlroots.
 ### Dependencies
 ```
 pacman -S archlinux-xdg-menu bluez-utils brightnessctl dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde
+```
+
+Also, for the bluetooth detection to work, enable the bluetooth service (even if the system does not have a
+controller)
+```
+systemctl enable --now bluetooth
 ```
 
 ## Tmux
