@@ -3,13 +3,13 @@
 {
     echo '{'
     echo '    "cpu": {'
-    echo '        "interval": 1,'
+    echo '        "interval": 2,'
 
     echo -n '        "format":" '
     for i in $(lscpu -p=CPU | grep -E '^[^\#]'); do
         echo -n "{icon$i}"
     done
-    echo '",'
+    echo ' {usage:>2}%",'
 
     echo '        "format-icons": ['
     echo '            "<span color='\''#69ff94'\''>▁</span>", // green'

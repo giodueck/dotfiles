@@ -28,6 +28,7 @@ Modern tiling WM based on wlroots.
     - [ ] KDE Connect
     - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled)
     - [x] Script to detect how many CPUs there are, and whether to enable the bluetooth module
+        - [ ] Change name of generated files and gitignore them
     - [x] Check if rofi can play nicer with the mouse
 - [x] Hyprland media keys
 - [x] Kill or minimize (Steam)
