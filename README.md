@@ -38,15 +38,17 @@ Modern tiling WM based on wlroots.
 - [x] Screenshots
     - [x] Notifications
 - [x] Hyprland theming and animations
+- [x] Clipboard manager
 - [ ] Custom wallpaper manager
 - [ ] Break out individual components: waybar, rofi, etc
 
 ### Dependencies
 ```
-pacman -S archlinux-xdg-menu bluez-utils brightnessctl dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde
+pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde
 ```
 
-Make sure any scripts have the execute permission set.
+> [!TIP]
+> Make sure any scripts have the execute permission set.
 
 Also, for the bluetooth detection to work, enable the bluetooth service (even if the system does not have a
 controller)
