@@ -1,6 +1,6 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Hack Nerd Font;
+  font-family: Hack Nerd Font Propo;
   font-size: 15px;
 }
 
@@ -115,7 +115,7 @@ window#waybar.empty #window {
   background-color: #1b242b;
   color: #6a92d7;
   border-radius: 7.5px;
-  padding: 0 3px;
+  padding: 0 5px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */

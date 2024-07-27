@@ -10,6 +10,7 @@
     "reload_style_on_change": true,
     "include": "~/.config/waybar/cpu.jsonc",
     "modules-left": [
+        "custom/launcher",
         "hyprland/workspaces",
         "cpu",
         "temperature",
@@ -120,7 +121,7 @@
 
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": " ",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -181,7 +182,7 @@
     // },
 
     "custom/power-menu": {
-        "format": "󰐥",
+        "format": "",
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
     },
     "keyboard-state": {
@@ -220,5 +221,9 @@
         "interval": 3,
         "ellipsis": "…",
         "max-length": 30
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "killall rofi || rofi -show drun -icon-theme breeze-dark"
     }
 }
