@@ -39,6 +39,7 @@ Modern tiling WM based on wlroots.
     - [x] Notifications
 - [x] Hyprland theming and animations
 - [x] Clipboard manager
+- [ ] Nicer notifications
 - [ ] Calendar (naive calendar looks cool)
 - [ ] Custom wallpaper manager
 - [ ] Break out individual components: waybar, rofi, etc

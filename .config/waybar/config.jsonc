@@ -186,7 +186,6 @@
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
     },
     "keyboard-state": {
-        "numlock": true,
         "capslock": true,
         "format": {
             "numlock": "󰎠",
