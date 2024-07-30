@@ -88,7 +88,6 @@ window#waybar.empty #window {
 
 #window,
 #workspaces {
-  margin: 0 4px;
   border-radius: 7.8px;
   background-color: #1f2335;
 }
@@ -202,7 +201,6 @@ label:focus {
 
 #network {
   color: #b48ead;
-  padding-right: 8px;
 }
 
 #network.disconnected {
