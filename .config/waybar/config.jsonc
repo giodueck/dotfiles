@@ -93,7 +93,7 @@
         "interval": 5,
         "format": " {}%",
         "tooltip": true,
-        "tooltip-format":" {used:0.1f}G\n {swapUsed:0.1f}G",
+        "tooltip-format":" {used:0.2f}G\n {swapUsed:0.2f}G",
         "max-length": 10
     },
     "backlight": {
