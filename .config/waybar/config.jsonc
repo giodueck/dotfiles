@@ -183,6 +183,7 @@
 
     "custom/power-menu": {
         "format": "",
+        "tooltip-format": "Power Menu",
         "on-click": "bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
     },
     "keyboard-state": {
@@ -217,12 +218,13 @@
             "stopped": ""
         },
         "ignored-players": [],
-        "interval": 3,
+        "interval": 1,
         "ellipsis": "…",
         "max-length": 50
     },
     "custom/launcher": {
         "format": "",
+        "tooltip-format": "Launcher",
         "on-click": "killall rofi || rofi -show drun -icon-theme breeze-dark"
     }
 }
