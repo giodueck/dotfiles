@@ -26,7 +26,7 @@ Modern tiling WM based on wlroots.
     - [ ] Rice lock screen
 - [x] Status bar
     - [ ] KDE Connect
-    - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled)
+    - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled but not inexistent)
     - [x] Script to detect how many CPUs there are, and whether to enable the bluetooth module
     - [x] Check if rofi can play nicer with the mouse
 - [x] Hyprland media keys
@@ -42,11 +42,11 @@ Modern tiling WM based on wlroots.
 - [ ] Battery low alert
 - [ ] Calendar (naive calendar looks cool)
 - [ ] Custom wallpaper manager
-- [ ] Break out individual components: waybar, rofi, etc
+- [ ] Break out individual components in this readme: waybar, rofi, etc
 
 ### Dependencies
 ```
-pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde
+pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde xwayland xwaylandvideobridge
 ```
 
 > [!TIP]
