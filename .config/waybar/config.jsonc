@@ -25,7 +25,6 @@
         "tray",
         "backlight",
         "pulseaudio",
-        // "custom/kdeconnect", // TODO
 //        "bluetooth",
         "network#wlan0",
         "network#enp3s0",
@@ -217,10 +216,10 @@
             "playing": "",
             "stopped": ""
         },
-        "ignored-players": [],
+        "ignored-players": ["firefox", "chromium", "plasma-browser-integration", "kdeconnect"],
         "interval": 1,
         "ellipsis": "…",
-        "max-length": 50
+        "max-length": 40
     },
     "custom/launcher": {
         "format": "",
