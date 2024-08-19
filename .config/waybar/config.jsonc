@@ -65,7 +65,8 @@
         "rewrite": {
             "(.*)Mozilla Firefox": "Firefox",
             "(.*) - Chromium": "Chromium",
-            "(.*)@(.*): (.*)": "$3"
+            "(.*)@(.*): (.*)": "$3",
+            "(.*) Microsoft Teams": "Teams"
         }
     },
     "tray": {
