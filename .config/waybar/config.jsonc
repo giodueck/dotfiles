@@ -91,7 +91,7 @@
     },
     "memory": {
         "interval": 5,
-        "format": " {}%",
+        "format": " {percentage:>3}%",
         "tooltip": true,
         "tooltip-format":" {used:0.2f}G\n {swapUsed:0.2f}G",
         "max-length": 10
