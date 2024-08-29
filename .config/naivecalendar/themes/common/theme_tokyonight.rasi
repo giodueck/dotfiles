@@ -7,13 +7,13 @@
     white1:             #c0caf5;
     blue3:              #3d59a1;
     red:                #F7768E;
-    red1:               #914c54;
+    purple:             #9d7cd8;
     foreground:         @blue;
     background:         #24283b;
     foreground-normal:  @foreground;
     background-normal:  @background;
-    foreground-urgent:  @red;
-    background-urgent:  @red1;
+    foreground-urgent:  @background;
+    background-urgent:  @purple;
     foreground-active:  #c0caf5;
     background-active:  @background;
     foreground-select:  #7aa2f7;
