@@ -31,3 +31,6 @@ cp -rv ~/.config/qt6ct/* .config/qt6ct/
 
 mkdir -p .config/rofi
 cp -rv ~/.config/rofi/* .config/rofi/
+
+mkdir -p .config/naivecalendar
+cp -rv ~/.config/naivecalendar/* .config/naivecalendar/

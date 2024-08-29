@@ -38,9 +38,9 @@ Modern tiling WM based on wlroots.
     - [x] Notifications
 - [x] Hyprland theming and animations
 - [x] Clipboard manager
+- [x] Calendar (naive calendar looks cool)
 - [ ] Nicer notifications
 - [ ] Battery low alert
-- [ ] Calendar (naive calendar looks cool)
 - [ ] Custom wallpaper manager
 - [ ] Break out individual components in this readme: waybar, rofi, etc
 
@@ -48,7 +48,15 @@ Modern tiling WM based on wlroots.
 ```
 pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde xwayland xwaylandvideobridge
 ```
+#### Manual build:
+- naivecalendar:
+```shell
+git pull https://framagit.org/Daguhh/naivecalendar
+cd naivecalendar
+make install
+```
 
+### Setup
 > [!TIP]
 > Make sure any scripts have the execute permission set.
 

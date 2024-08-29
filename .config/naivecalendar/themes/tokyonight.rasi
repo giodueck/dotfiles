@@ -1,0 +1,10 @@
+/************************************************
+ * ROFI Color theme
+ * User: giodueck
+ * Copyright: 2024 giodueck
+ ***********************************************/
+
+@import "~/.config/naivecalendar/themes/common/theme_tokyonight.rasi"
+@import "~/.local/share/naivecalendar/themes/common/position.rasi"
+@import "~/.local/share/naivecalendar/themes/common/shape_classic.rasi"
+
