@@ -36,3 +36,6 @@ cp -rv .config/rofi/* ~/.config/rofi/
 
 mkdir -p ~/.config/naivecalendar
 cp -rv .config/naivecalendar/* ~/.config/naivecalendar/
+
+mkdir -p .local/share/naivecalendar/global
+cp -rv .local/share/naivecalendar/global/events.cfg ~/.local/share/naivecalendar/global/events.cfg
