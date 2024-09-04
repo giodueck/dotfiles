@@ -51,7 +51,7 @@ pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hyp
 #### Manual build:
 - naivecalendar:
 ```shell
-git pull https://framagit.org/Daguhh/naivecalendar
+git clone https://framagit.org/Daguhh/naivecalendar
 cd naivecalendar
 make install
 ```
