@@ -8,3 +8,6 @@
 @import "~/.local/share/naivecalendar/themes/common/position.rasi"
 @import "~/.local/share/naivecalendar/themes/common/shape_classic.rasi"
 
+#window {
+    width: 400px;
+}
