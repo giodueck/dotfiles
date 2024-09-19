@@ -80,7 +80,7 @@
     "clock#clock2": {
         "format": "<span color='#9d7cd8'> </span>{:%a %d %b}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-        "on-click": "~/.local/bin/naivecalendar -t tokyonight -e 'alacritty -e nvim'"
+        "on-click": "killall rofi || ~/.local/bin/naivecalendar -t tokyonight -e 'alacritty -e nvim'"
     },
 
     "temperature": {
