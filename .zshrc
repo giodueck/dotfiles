@@ -1,5 +1,7 @@
 export LC_ALL="C.utf-8"
 export EDITOR="nvim"
+export HISTSIZE=131072
+export SAVEHIST=131072
 
 # Aliases for launching programs
 alias vim=nvim
