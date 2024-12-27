@@ -37,3 +37,6 @@ cp -rv ~/.config/naivecalendar/* .config/naivecalendar/
 
 mkdir -p .local/share/naivecalendar/global
 cp -rv ~/.local/share/naivecalendar/global/events.cfg .local/share/naivecalendar/global/events.cfg
+
+mkdir -p .config/swaync
+cp -rv ~/.config/swaync/* .config/swaync/

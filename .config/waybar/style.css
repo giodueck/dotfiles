@@ -1,5 +1,4 @@
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
   font-family: Hack Nerd Font Propo;
   font-size: 15px;
 }
@@ -47,9 +46,6 @@ window#waybar.hidden {
 }
 
 #window {
-  /* border-radius: 20px; */
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
   padding: 0 5px;
   color: #a9b1d6;
 }
@@ -78,10 +74,10 @@ window#waybar.empty #window {
 #keyboard-state,
 #power-profiles-daemon,
 #custom-hyprPicker,
-#custom-power-menu {
+#custom-power-menu,
+  #custom-notification {
   padding: 0 4px;
   color: #e5e5e5;
-  /* color: #bf616a; */
   border-radius: 6px;
   background-color: #1f2335;
 }
@@ -132,25 +128,21 @@ window#waybar.empty #window {
 }
 
 #backlight {
-  /* color: #EBCB8B; */
   color: #8fbcbb;
 }
 
 #clock {
   color: #c8d2e0;
-  /* background-color: #14141e; */
 }
 
 #battery {
   color: #c0caf5;
-  /* background-color: #90b1b1; */
 }
 
 #battery.charging,
 #battery.full,
 #battery.plugged {
   color: #9ece6a;
-  /* background-color: #26a65b; */
 }
 
 #power-profiles-daemon {
