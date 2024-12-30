@@ -75,7 +75,8 @@ window#waybar.empty #window {
 #power-profiles-daemon,
 #custom-hyprPicker,
 #custom-power-menu,
-  #custom-notification {
+#idle_inhibitor,
+#custom-notification {
   padding: 0 4px;
   color: #e5e5e5;
   border-radius: 6px;
@@ -228,12 +229,10 @@ label:focus {
 }
 
 #idle_inhibitor {
-  background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
+  color: #7dcfff;
 }
 
 #mpd {
