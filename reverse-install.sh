@@ -40,3 +40,6 @@ cp -rv ~/.local/share/naivecalendar/global/events.cfg .local/share/naivecalendar
 
 mkdir -p .config/swaync
 cp -rv ~/.config/swaync/* .config/swaync/
+
+mkdir -p .config/ghostty
+cp -rv ~/.config/ghostty/* .config/ghostty/
