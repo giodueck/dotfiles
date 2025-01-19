@@ -1,6 +1,8 @@
 # Font and theming
 font-family = Hack Nerd Font
 font-size = 10
+adjust-cell-height = 1
+adjust-font-baseline = 1
 theme = tokyonight_night
 # Darker background than tn_night to get dimming effect in tmux when leaving a terminal pane
 background = #16161e
