@@ -4,11 +4,13 @@ font-size = 10
 adjust-cell-height = 1
 adjust-font-baseline = 1
 theme = tokyonight_night
-# Darker background than tn_night to get dimming effect in tmux when leaving a terminal pane
-background = 16161e
 shell-integration-features = no-cursor
 cursor-style = block
 cursor-invert-fg-bg = true
+# Darker background than tn_night to get dimming effect in tmux when leaving a terminal pane
+background = 16161e
+# Darker more orange tone for yellow, makes warnings and highlighted text in pagers more readable
+palette = 3=#f76f00
 
 # Window configurations
 window-decoration = false
