@@ -6,7 +6,7 @@
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "Hack Nerd Font Mono", style = "Regular" }
+normal = { family = "Hack Nerd Font", style = "Regular" }
 size = 10
 
 [terminal]
