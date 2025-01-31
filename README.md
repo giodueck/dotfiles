@@ -1,7 +1,6 @@
 # My dotfiles
 
-## Alacritty
-Lightly customized for an unintrusive, fast console.
+Not all configured programs are listed here, only the ones which have some dependencies or special configuration requirements.
 
 ## [Neovim configs](https://github.com/giodueck/nvim)
 Merge to this repo pending.
@@ -25,8 +24,8 @@ Modern tiling WM based on wlroots.
     - [x] Lock on laptop lid close
     - [ ] Rice lock screen
 - [x] Status bar
-    - [ ] KDE Connect
     - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled but not inexistent)
+    - [x] KDE Connect
     - [x] Script to detect how many CPUs there are, and whether to enable the bluetooth module
     - [x] Check if rofi can play nicer with the mouse
 - [x] Hyprland media keys
@@ -39,14 +38,13 @@ Modern tiling WM based on wlroots.
 - [x] Hyprland theming and animations
 - [x] Clipboard manager
 - [x] Calendar (naive calendar looks cool)
-- [ ] Nicer notifications
+- [x] Nicer notifications
 - [ ] Battery low alert
 - [ ] Custom wallpaper manager
-- [ ] Break out individual components in this readme: waybar, rofi, etc
 
 ### Dependencies
 ```
-pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde xwayland xwaylandvideobridge
+pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist dolphin grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde xwayland
 ```
 #### Manual build:
 - naivecalendar:
