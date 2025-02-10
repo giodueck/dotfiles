@@ -46,7 +46,7 @@ vault-backup() {
 # Ping an address until it responds. Useful for connection punch-through, e.g. between zerotier
 # clients in a common network
 punch() {
-    while ! ping -c 1 "$1" &>/dev/null; do
+    while ping -c 1 "$1" | grep '0 received' &>/dev/null; do
         echo -n .
     done
     echo "done"
