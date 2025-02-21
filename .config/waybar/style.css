@@ -29,6 +29,13 @@ window#waybar.hidden {
   border-radius: 0;
 }
 
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: none;
+  transition: none;
+}
+
 #workspaces button.empty {
   color: #3b4261;
 }
