@@ -54,6 +54,14 @@ cd naivecalendar
 make install
 ```
 
+- Tokyonight GTK theme from https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme or https://www.gnome-look.org/p/1681315.
+```
+mkdir -p ~/.themes
+cd ~/.themes
+mv ~/Downloads/Tokyonight-Dark-Storm-BL-LB.zip .
+unzip Tokyonight-Dark-Storm-BL-LB.zip
+```
+
 ### Setup
 > [!TIP]
 > Make sure any scripts have the execute permission set.
