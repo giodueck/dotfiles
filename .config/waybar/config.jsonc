@@ -22,6 +22,7 @@
         "mpris"
     ],
     "modules-right": [
+        "hyprland/submap",
         "tray",
         "custom/notification",
         "idle_inhibitor",
@@ -71,6 +72,9 @@
             "(.*)@(.*): (.*)": "$3",
             "(.*) Microsoft Teams": "Teams"
         }
+    },
+    "hyprland/submap": {
+        "format": " 󰥻 {} "
     },
     "tray": {
         "spacing": 10

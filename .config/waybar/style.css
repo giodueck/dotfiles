@@ -80,7 +80,6 @@ window#waybar.empty #window {
 #bluetooth,
 #keyboard-state,
 #power-profiles-daemon,
-#custom-hyprPicker,
 #custom-power-menu,
 #idle_inhibitor,
 #custom-notification {
@@ -91,9 +90,14 @@ window#waybar.empty #window {
 }
 
 #window,
+#submap,
 #workspaces {
   border-radius: 7.8px;
   background-color: #1f2335;
+}
+
+#submap {
+  color: #7dcfff;
 }
 
 #cpu {
