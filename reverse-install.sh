@@ -47,3 +47,6 @@ cp -rv ~/.config/ghostty/* .config/ghostty/
 
 mkdir -p .themes
 cp -rv ~/.themes .themes
+
+mkdir -p etc/sddm.conf.d
+cp -v /etc/sddm.conf.d/* etc/sddm.conf.d

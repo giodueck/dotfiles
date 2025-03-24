@@ -54,13 +54,8 @@ cd naivecalendar
 make install
 ```
 
-- Tokyonight GTK theme from https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme or https://www.gnome-look.org/p/1681315.
-```
-mkdir -p ~/.themes
-cd ~/.themes
-mv ~/Downloads/Tokyonight-Dark-Storm-BL-LB.zip .
-unzip Tokyonight-Dark-Storm-BL-LB.zip
-```
+### GTK Theme
+The theme included in `.themes` is Tokyonight-Storm (https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme).
 
 ### Setup
 > [!TIP]
@@ -100,3 +95,15 @@ Also sets fzf keybinds in `.local/share/fzf/key-bindings.zsh`
 #### AUR
 - [minecraft-launcher](https://aur.archlinux.org/packages/minecraft-launcher) (optional, function)
 - [smem](https://aur.archlinux.org/packages/smem) (optional, function)
+
+## SDDM Theme
+```
+git clone https://aur.archlinux.org/simple-sddm-theme-2-git.git
+cd simple-sddm-theme-2-git
+makepkg
+sudo pacman -U simple-sddm-theme-2-git-_-1-any.pkg.tar.zst
+```
+
+This should install the theme under `/usr/share/sddm/themes`. The setting of the theme is not actually a dotfile per se,
+as it is user independent and stored under `/etc/sddm.conf.d`, but this stays here until I decide to do an ansible setup
+or something.
