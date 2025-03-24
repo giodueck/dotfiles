@@ -107,3 +107,5 @@ sudo pacman -U simple-sddm-theme-2-git-_-1-any.pkg.tar.zst
 This should install the theme under `/usr/share/sddm/themes`. The setting of the theme is not actually a dotfile per se,
 as it is user independent and stored under `/etc/sddm.conf.d`, but this stays here until I decide to do an ansible setup
 or something.
+
+To change the background, adjust in `/usr/share/sddm/themes/simple-sddm-2/theme.conf`.
