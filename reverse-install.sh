@@ -44,3 +44,6 @@ cp -rv ~/.config/swaync/* .config/swaync/
 
 mkdir -p .config/ghostty
 cp -rv ~/.config/ghostty/* .config/ghostty/
+
+mkdir -p .themes
+cp -rv ~/.themes .themes
