@@ -55,8 +55,9 @@
             "default": ""
         },
         "persistent-workspaces": {
-            "*": 5 // 5 workspaces by default on every monitor
+            "*": [1,2,3,4,5] // 5 workspaces by default on every monitor
         },
+        "all-outputs": true,
         "show-special": true,
         "special-visible-only": true
     },
