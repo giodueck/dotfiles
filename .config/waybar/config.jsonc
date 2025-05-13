@@ -62,7 +62,7 @@
         "special-visible-only": true
     },
     "hyprland/window": {
-        "format": "{}",
+        "format": "CLASS:{class} _-_-_ {title}",
         "icon": true,
         "icon-size": 16,
         "separate-outputs": true,
@@ -70,8 +70,9 @@
         "rewrite": {
             "(.*)Mozilla Firefox": "Firefox",
             "(.*) - Chromium": "Chromium",
-            "(.*)@(.*): (.*)": "$3",
-            "(.*) Microsoft Teams": "Teams"
+            "(.*) Microsoft Teams": "Teams",
+            "(.*)Alacritty (.*)": "Alacritty",
+            "CLASS:(.* _-_-_ )(.*)": "$2"
         }
     },
     "hyprland/submap": {
