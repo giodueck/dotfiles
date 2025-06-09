@@ -17,7 +17,7 @@ memuse() {
 
 # Human-readable and sorted list of directory and file sizes in a directory
 cwdsize() {
-    du -sh "$PWD"/* | sort -h
+    du -sh $(ls -A "$PWD") | sort -h
 }
 
 # Human-readable size of contents in given directory
