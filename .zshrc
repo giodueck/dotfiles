@@ -3,6 +3,7 @@ export EDITOR="nvim"
 export HISTSIZE=131072
 export SAVEHIST=131072
 export PATH=$PATH:~/.local/bin
+export MANPAGER='nvim +Man!'
 
 # Aliases for launching programs
 alias vim=nvim
@@ -22,7 +23,7 @@ cwdsize() {
 
 # Human-readable size of contents in given directory
 dirsize() {
-    du -sh "$1" | sort -h
+    du -sh $(ls -A "$1") | sort -h
 }
 
 # Minecraft launcher (AUR) won't launch from the desktop as the prime-run application
@@ -116,5 +117,5 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
 # '
 source ~/.local/share/fzf/key-bindings.zsh
 
-# Plugins
+# Plugins for zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
