@@ -15,33 +15,6 @@ pacman -S neovim ripgrep fd
 ## Hyprland
 Modern tiling WM based on wlroots.
 
-### TODO
-- [x] Check bluetooth/wifi settings
-- [x] Rofi theme
-- [x] Make apps (dolphin) use dark theme
-- [x] Lock screen
-    - [x] Idle screen lock
-    - [x] Lock on laptop lid close
-    - [ ] Rice lock screen
-- [x] Status bar
-    - [ ] Hide inactive modules into a tray-like module (e.g. bluetooth disabled but not inexistent)
-    - [x] KDE Connect
-    - [x] Script to detect how many CPUs there are, and whether to enable the bluetooth module
-    - [x] Check if rofi can play nicer with the mouse
-- [x] Hyprland media keys
-- [x] Kill or minimize (Steam)
-- [x] Test powermenu.sh
-- [x] Check that camera/microphone work
-- [x] Check that screen-sharing works
-- [x] Screenshots
-    - [x] Notifications
-- [x] Hyprland theming and animations
-- [x] Clipboard manager
-- [x] Calendar (naive calendar looks cool)
-- [x] Nicer notifications
-- [ ] Battery low alert
-- [ ] Custom wallpaper manager
-
 ### Dependencies
 ```
 pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist nautilus grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde kvantum-qt5
