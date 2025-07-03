@@ -126,6 +126,7 @@ label:focus {
 
 #cpu {
   color: #f7768e;
+  padding-right: 3pt;
 }
 
 #memory {
