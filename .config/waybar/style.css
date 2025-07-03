@@ -118,7 +118,7 @@ label:focus {
 #temperature {
 }
 #temperature.warning {
-  color: #64502d;
+  color: #e0af68;
 }
 #temperature.critical {
   color: #f7768e;
