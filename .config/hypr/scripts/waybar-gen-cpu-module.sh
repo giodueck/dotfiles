@@ -9,7 +9,7 @@
     for i in $(lscpu -p=CPU | grep -E '^[^\#]'); do
         echo -n "{icon$i}"
     done
-    echo ' {usage:>3}%",'
+    echo '",'
 
     echo '        "format-icons": ['
     echo '            "<span color='\''#69ff94'\''>▁</span>", // green'

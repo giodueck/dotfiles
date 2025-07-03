@@ -2,40 +2,65 @@
 {
     "height": 24, // Waybar height (to be removed for auto height)
     "layer": "top", // Waybar at top layer
-    "margin-top": 4,
-    "margin-left": 4,
+    "margin-top": 0,
+    "margin-left": 0,
     "margin-bottom": 0,
-    "margin-right": 4,
-    "spacing": 4, // Gaps between modules
+    "margin-right": 0,
+    "spacing": 6, // Gaps between modules
     "reload_style_on_change": true,
     "include": "~/.config/waybar/cpu.jsonc",
     "modules-left": [
-        "custom/launcher",
         "hyprland/workspaces",
-        "cpu",
-        "temperature",
-        "power-profiles-daemon",
-        "memory",
-        "hyprland/window"
+        "hyprland/window",
+        "mpris",
+        "hyprland/submap"
     ],
     "modules-center": [
-        "mpris"
+        // custom dynamic_island
+        "clock"
     ],
     "modules-right": [
-        "hyprland/submap",
         "tray",
-        "custom/notification",
-        "idle_inhibitor",
-        "backlight",
-        "pulseaudio",
-//        "bluetooth",
-        "network#wlan0",
-        "network#enp3s0",
-        "battery",
-        "clock",
-        "clock#clock2",
-        "custom/power-menu"
+
+        "group/monitoring",
+
+        // group control
+        "group/control",
+
+        "battery"
+
+        // "custom/notification",
+        // "custom/power-menu"
     ],
+
+    /*
+        Groups
+    */
+    "group/monitoring": {
+        "orientation": "inherit",
+        "modules": [
+            "cpu",
+            "temperature",
+            "memory"
+        ]
+    },
+
+    "group/control": {
+        "orientation": "inherit",
+        "modules": [
+            "power-profiles-daemon",
+            "idle_inhibitor",
+            "backlight",
+            "pulseaudio",
+            "bluetooth",
+            "network#wlan0",
+            "network#enp3s0"
+        ]
+    },
+
+    /*
+        Modules
+    */
     "hyprland/workspaces": {
         "format": "{icon}",
         "on-click": "activate",
@@ -54,10 +79,6 @@
             "special": "󰰢",
             "default": ""
         },
-        "persistent-workspaces": {
-            "*": [1,2,3,4,5] // 5 workspaces by default on every monitor
-        },
-        "all-outputs": true,
         "show-special": true,
         "special-visible-only": true
     },
@@ -83,25 +104,22 @@
     },
     "clock": {
         "interval": 1,
-        "format": "<span color='#bf616a'> </span>{:%H:%M}",
-        "tooltip-format": "{:%H:%M:%S}"
-    },
-    "clock#clock2": {
-        "format": "<span color='#9d7cd8'> </span>{:%d %b}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d %b - %H:%M}",
+        "tooltip-format": "{:%Y-%m-%d %H:%M:%S}",
         "on-click": "killall rofi || ~/.local/bin/naivecalendar -t tokyonight -e 'alacritty -e nvim'"
     },
 
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 85,
-        "format-critical": "{temperatureC}°C 󰀦 ",
-        "format": "{temperatureC}°C"
+        "warning-threshold": 85,
+        "critical-threshold": 90,
+        "format": "{icon}",
+        "format-icons": ["", "", ""]
     },
     "memory": {
         "interval": 5,
-        "format": " {percentage:>3}%",
+        "format": " {percentage:>2}%",
         "tooltip": true,
         "tooltip-format":" {used:0.2f}G\n {swapUsed:0.2f}G",
         "max-length": 10
@@ -110,16 +128,18 @@
         // "device": "DP-1",
         "on-scroll-up": "brightnessctl s +5%",
         "on-scroll-down": "brightnessctl s 5%-",
-        "format": "{icon} {percent}%",
+        "format": "{icon}",
+        "tooltip-format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "network#wlan0": {
         "interface": "wlan0",
         "interval": 2,
-        "format-wifi": "󰖩",
+        "format": "{icon}",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip-format-wifi": "󰖩 {essid} {signalStrength}%\n󰇚{bandwidthDownBytes:>4}  󰕒{bandwidthUpBytes:>4}",
         "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
-        "format-disconnected": ""
+        "format-disconnected": "󰤭"
     },
     "network#enp3s0": {
         "interface": "enp3s0",
@@ -130,7 +150,8 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}",
+        "tooltip-format": "{volume}% {icon} {source_desc}",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -148,16 +169,17 @@
 
     "bluetooth": {
         "on-click": "bash ~/.config/waybar/scripts/rofi-bluetooth &",
-        "format": " {device_alias}",
+        "format": "",
+        "format-no-controller": "",
         "tooltip-format-connected-battery": " {device_alias} {device_battery_percentage}%",
         "format-on": "",
-        "format-disabled": "󰂲"
+        "format-off": "󰂲"
     },
 
     "battery": {
       // "bat": "BAT0",
       // "adapter": "ADP0",
-      "interval": 60,
+      "interval": 5,
       "states": {
           "warning": 30,
           "critical": 15
