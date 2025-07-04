@@ -105,8 +105,9 @@
     "clock": {
         "interval": 1,
         "format": "{:%d %b - %H:%M}",
-        "tooltip-format": "{:%Y-%m-%d %H:%M:%S}",
-        "on-click": "killall rofi || ~/.local/bin/naivecalendar -t tokyonight -e 'alacritty -e nvim'"
+        "format-alt": "{:%Y-%m-%d - %H:%M:%S}",
+        "tooltip-format": "{:%Y-%m-%d - %H:%M:%S}",
+        "on-click-right": "killall rofi || ~/.local/bin/naivecalendar -t tokyonight -e 'alacritty -e nvim'"
     },
 
     "temperature": {
