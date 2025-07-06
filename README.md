@@ -27,6 +27,9 @@ cd naivecalendar
 make install
 ```
 
+- eww:
+AUR: https://aur.archlinux.org/packages/eww
+
 ### GTK Theme
 The theme included in `.themes` is Tokyonight-Storm (https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme).
 

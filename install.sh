@@ -51,3 +51,6 @@ cp -rv .themes/* ~/.themes
 
 mkdir -p /etc/sddm.conf.d
 sudo cp -v etc/sddm.conf.d/* /etc/sddm.conf.d
+
+mkdir -p ~/.config/eww
+cp -rv .config/eww/* ~/.config/eww/
