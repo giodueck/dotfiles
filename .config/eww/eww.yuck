@@ -9,7 +9,7 @@
   :class "wall_clock"
   (clock))
 
-(defpoll lithour :interval "30m" "date +%H")
+(defpoll lithour :interval "30s" "date +%H")
 (defpoll litmin :interval "30s" "date +%M")
 
 (defwidget clock []
