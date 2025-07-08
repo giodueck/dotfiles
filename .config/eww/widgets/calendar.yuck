@@ -1,0 +1,44 @@
+(include "./widgets/common/closer.yuck")
+
+(defwindow calendar
+  :geometry (
+             geometry :x "0%"
+             :y "5%"
+             :width "20%"
+             :height "17%"
+             :anchor "top center")
+  :stacking "overlay"
+  :class "calendar-window"
+  (eventbox :onhoverlost "eww close calendar-closer; eww close calendar" (cal)))
+
+(defwindow calendar-closer
+  :geometry (
+             geometry :x "0%"
+             :y "0%"
+             :width "100%"
+             :height "100%"
+             :anchor "top right")
+  :stacking "fg"
+  :focusable false
+  (closer :window "calendar"))
+
+(defpoll current-year :interval "60m"
+  :initial "initial-year"
+  `date +%y`
+)
+
+(defpoll current-month :interval "60m"
+  :initial "initial-month"
+  `date +%b`
+)
+
+(defwidget cal[]
+  (box :class "cal-box"
+       :orientation "v"
+       :space-evenly false
+         (calendar :class "cal"
+                 :month current-month
+                   :year current-year
+       )
+  )
+)

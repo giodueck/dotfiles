@@ -1,0 +1,4 @@
+(defwidget closer[window]
+  (eventbox :onclick "eww close ${window}; eww close ${window}-closer")
+)
+

@@ -1,0 +1,18 @@
+(defwindow wallpaper-clock
+  :geometry (
+             geometry :x "0%"
+             :y "0%"
+             :width "320"
+             :height "160"
+             :anchor "bottom right")
+  :stacking "bg"
+  :class "wallpaper-clock"
+  (clock))
+
+(defpoll lithour :interval "10s" "date +%H")
+(defpoll litmin :interval "10s" "date +%M")
+
+(defwidget clock []
+  (box :orientation "h" :space-evenly false :class "clock" :halign "center"
+    (label :class "content" :text "${lithour}:${litmin}")
+    ))

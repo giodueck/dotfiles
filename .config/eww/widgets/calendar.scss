@@ -1,0 +1,33 @@
+.calendar-closer {
+  background: none;
+}
+
+.calendar-window {
+  font-family: Hack Nerd Font;
+  background-color: $bg-color;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+calendar-window:selected {
+  color: $blue;
+}
+
+calendar-window.header {
+  color: $blue;
+  font-weight: bold;
+}
+
+calendar-window.button {
+  color: $green;
+}
+
+calendar-window.highlight {
+  color: $green;
+  font-weight: bold;
+}
+
+calendar-window:indeterminate {
+  color: $bg-color;
+}

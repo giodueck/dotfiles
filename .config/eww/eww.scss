@@ -1,12 +1,2 @@
-.wallpaper-clock {
-  background: none;
-}
-
-.clock {
-  color: rgba(120, 160, 90, 1);
-  .content {
-    font-family: "SF Pro Display Bold";
-    font-size: 80pt;
-    font-weight: bold;
-  }
-}
+@import "./widgets/wallpaper-clock.scss"
+@import "./widgets/calendar.scss"
