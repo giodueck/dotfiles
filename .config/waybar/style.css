@@ -48,6 +48,8 @@ label:focus {
 #keyboard-state,
 #power-profiles-daemon,
 #custom-power-menu,
+#custom-exit,
+#custom-lock,
 #custom-notification {
   min-width: 14pt;
   padding: 0 1px;
@@ -134,11 +136,24 @@ label:focus {
 }
 
 
+#custom-divider {
+  color: #3b4261;
+}
+
 #custom-power-menu {
   color: #7aa2f7;
-  border-radius: 7.5px;
-  padding: 0 5px;
+  padding-right: 3pt;
+  min-width: 0pt;
 }
+
+#custom-lock {
+  color: #e0af68;
+}
+
+#custom-exit {
+  color: #f7768e;
+}
+
 
 #custom-launcher {
   color: #6a92d7;

@@ -27,10 +27,11 @@
         // group control
         "group/control",
 
-        "battery"
+        "battery",
 
         // "custom/notification",
         // "custom/power-menu"
+        "group/power"
     ],
 
     /*
@@ -55,6 +56,21 @@
             "bluetooth",
             "network#wlan0",
             "network#enp3s0"
+        ]
+    },
+
+    "group/power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power-menu", // First element is the "group leader" and won't ever be hidden
+            "custom/divider",
+            "custom/exit",
+            "custom/lock"
         ]
     },
 
@@ -207,11 +223,28 @@
         }
     },
 
+    "custom/divider": {
+        "format": "│",
+        "format-alt": "",
+        "tooltip-format": ""
+    },
+
     "custom/power-menu": {
         "format": "",
         "tooltip-format": "Power Menu",
         "on-click": "killall rofi || bash ~/.config/waybar/scripts/power-menu/powermenu.sh"
     },
+    "custom/lock": {
+        "format": "",
+        "tooltip-format": "Lock",
+        "on-click": "hyprlock --immediate"
+    },
+    "custom/exit": {
+        "format": "󰭑",
+        "tooltip-format": "Logout",
+        "on-click": "hyprctl dispatch exit"
+    },
+
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
         "format-paused": "{player_icon} {status_icon} {title} - {artist}",
