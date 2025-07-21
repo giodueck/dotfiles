@@ -92,7 +92,7 @@ case $chosen in
     elif [[ -x '/usr/bin/i3lock' ]]; then
       i3lock
     elif [[ -x '/usr/bin/Hyprland' ]]; then
-      hyprlock --immediate
+      hyprlock
     fi
     ;;
   "$suspend")
