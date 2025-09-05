@@ -54,3 +54,7 @@ sudo cp -v etc/sddm.conf.d/* /etc/sddm.conf.d
 
 mkdir -p ~/.config/eww
 cp -rv .config/eww/* ~/.config/eww/
+
+mkdir -p ~/.config/Vial
+cp -rv .config/Vial/* ~/.config/Vial/
+
