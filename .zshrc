@@ -18,12 +18,18 @@ memuse() {
 
 # Human-readable and sorted list of directory and file sizes in a directory
 cwdsize() {
-    du -sh $(ls -A "$PWD") | sort -h
+    {
+        for name in *; do
+            du -sh $name
+        done
+    } | sort -h
 }
 
 # Human-readable size of contents in given directory
 dirsize() {
-    du -sh $(ls -A "$1") | sort -h
+    pushd "$1" > /dev/null
+    cwdsize
+    popd > /dev/null
 }
 
 # Minecraft launcher (AUR) won't launch from the desktop as the prime-run application
