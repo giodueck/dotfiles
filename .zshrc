@@ -128,3 +128,6 @@ source ~/.local/share/fzf/key-bindings.zsh
 
 # Plugins for zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Disable Ctrl-S + Ctrl-Q stopping and restarting output
+setopt noflowcontrol
