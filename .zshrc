@@ -75,6 +75,9 @@ alias gd="git diff"
 alias gca="git commit -S --amend"
 alias gch="git checkout"
 
+# Restore Hyprland lock
+alias relock="hyprctl --instance 0 dispatch 'exec hyprlock'"
+
 # GPG Key
 GPG_TTY=$(tty)
 export GPG_TTY
