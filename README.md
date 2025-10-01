@@ -47,6 +47,9 @@ systemctl enable --now bluetooth
 Tmux configuration based on [the zen tmux config](https://www.youtube.com/watch?v=DzNmUNvnB04)
 and [a guide to customizing your tmux.conf](https://hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/).
 
+### Sessionizer
+The `tmux-sessionizer` script was copied from The Primeagen: https://github.com/ThePrimeagen/tmux-sessionizer/
+
 ### Dependencies
 - [tpm](https://github.com/tmux-plugins/tpm)
 
