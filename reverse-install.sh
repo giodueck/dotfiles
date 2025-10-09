@@ -60,5 +60,5 @@ cp -rv ~/.config/Vial/* .config/Vial/
 mkdir -p .local/bin
 cp -rv ~/.local/bin/tmux-sessionizer .local/bin/
 
-mkdir -p .local/share/tmux/tmux-sessionizer
-cp -rv ~/.local/share/tmux/tmux-sessionizer/paths .local/share/tmux/tmux-sessionizer/
+mkdir -p .config/tmux-sessionizer
+cp -rv ~/.config/tmux-sessionizer/* .config/tmux-sessionizer/
