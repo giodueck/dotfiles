@@ -88,3 +88,7 @@ as it is user independent and stored under `/etc/sddm.conf.d`, but this stays he
 or something.
 
 To change the background, adjust in `/usr/share/sddm/themes/simple-sddm-2/theme.conf`.
+
+## Keyboard layout
+
+The keyboard layouts in `.config/Vial/` are not dotfiles per-se, but they are Vial configuration/layout files that can be loaded into a keyboard.
