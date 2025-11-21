@@ -50,6 +50,7 @@ label:focus {
 #custom-power-menu,
 #custom-exit,
 #custom-lock,
+#custom-nvidia,
 #custom-notification {
   min-width: 14pt;
   padding: 0 1px;
@@ -272,4 +273,8 @@ label:focus {
   padding: 0 10px;
   margin: 0 4px;
   color: #ff9e64;
+}
+
+#custom-nvidia {
+  color: #9ece6a;
 }
