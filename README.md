@@ -17,7 +17,7 @@ Modern tiling WM based on wlroots.
 
 ### Dependencies
 ```
-pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist nautilus grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde kvantum-qt5
+pacman -S archlinux-xdg-menu bluez-utils brightnessctl cliphist nautilus grim hypridle hyprland hyprlock hyprpaper networkmanager ocean-sound-theme pavucontrol pipewire playerctl polkit polkit-kde-agent qt5-wayland qt5ct qt6-wayland qt6ct rofi-wayland slurp socat swaync ttf-hack-nerd waybar wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-kde kvantum-qt5
 ```
 #### Manual build:
 - naivecalendar:
