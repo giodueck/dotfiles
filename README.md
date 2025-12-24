@@ -28,7 +28,7 @@ make install
 ```
 
 - eww:
-AUR: https://aur.archlinux.org/packages/eww
+AUR: https://aur.archlinux.org/eww
 
 ### GTK Theme
 The theme included in `.themes` is Tokyonight-Storm (https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme).
@@ -72,8 +72,8 @@ pacman -S git fzf grml-zsh-config neovim nvidia-prime zsh-autosuggestions zoxide
 Also sets fzf keybinds in `.local/share/fzf/key-bindings.zsh`
 
 #### AUR
-- [minecraft-launcher](https://aur.archlinux.org/packages/minecraft-launcher) (optional, function)
-- [smem](https://aur.archlinux.org/packages/smem) (optional, function)
+- [minecraft-launcher](https://aur.archlinux.org/minecraft-launcher) (optional, function)
+- [smem](https://aur.archlinux.org/smem) (optional, function)
 
 ## SDDM Theme
 ```
