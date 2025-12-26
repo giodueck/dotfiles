@@ -41,6 +41,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/nvidia",
+            "custom/gpu",
             "cpu",
             "temperature",
             "temperature#amd",
@@ -317,6 +318,13 @@
     "custom/nvidia": {
         "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu --format=csv,nounits,noheader | sed 's/\\([0-9]\\+\\), \\([0-9]\\+\\)/󰘚 \\1%  \\2°C /g' | tr -d '\\n'; bc <<< $(nvidia-smi --query-gpu=memory.used,memory.total --format=csv,nounits,noheader | sed 's/\\([0-9]\\+\\), \\([0-9]\\+\\)/scale=2\\n \\1.0 \\/ \\2.0 * 100/g') | sed 's/\\([0-9]\\+\\)\\.00/ \\1% /g'",
         "format": "{}",
+        "interval": 2
+    },
+
+    "custom/gpu": {
+        "exec": "cat /sys/class/hwmon/hwmon1/device/gpu_busy_percent",
+        "format": "󰢮 {}% ",
+        "return-type": "",
         "interval": 2
     }
 }
