@@ -322,8 +322,9 @@
     },
 
     "custom/gpu": {
-        "exec": "cat /sys/class/hwmon/hwmon1/device/gpu_busy_percent",
-        "format": "󰢮 {}% ",
+        // "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent",
+        "exec": "echo -n \"󰢮 $(cat /sys/class/drm/card1/device/gpu_busy_percent | sed 's/\\n//')\"; echo -n '%  '; echo -n $(bc <<< \"scale=2; $({ cat /sys/class/drm/card1/device/mem_info_vram_used; echo -n '/ '; cat /sys/class/drm/card1/device/mem_info_vram_total; } | xargs) * 100\" | sed \"s/.00//\" | sed 's/\\n//'); echo -n '% '",
+        "format": "{}",
         "return-type": "",
         "interval": 2
     }
