@@ -322,10 +322,20 @@
     },
 
     "custom/gpu": {
-        // "exec": "cat /sys/class/drm/card1/device/gpu_busy_percent",
-        "exec": "echo -n \"󰢮 $(cat /sys/class/drm/card1/device/gpu_busy_percent | sed 's/\\n//')\"; echo -n '%  '; echo -n $(bc <<< \"scale=2; $({ cat /sys/class/drm/card1/device/mem_info_vram_used; echo -n '/ '; cat /sys/class/drm/card1/device/mem_info_vram_total; } | xargs) * 100\" | sed \"s/.00//\" | sed 's/\\n//'); echo -n '% '",
-        "format": "{}",
-        "return-type": "",
+        "exec": "~/.config/waybar/scripts/amdgpu-usage.sh",
+        "format": "󰢮 {icon} ", // useful at a glance, like the cpu module
+        "format-alt": "󰢮 {}%  {alt}% ", // more detail, for when doing compute tasks
+        "format-icons": [
+            "<span color='#69ff94'>▁</span>", // green
+            "<span color='#2aa9ff'>▂</span>", // blue
+            "<span color='#f8f8f2'>▃</span>", // white
+            "<span color='#f8f8f2'>▄</span>", // white
+            "<span color='#ffffa5'>▅</span>", // yellow
+            "<span color='#ffffa5'>▆</span>", // yellow
+            "<span color='#ff9977'>▇</span>", // orange
+            "<span color='#dd532e'>█</span>"  // red
+        ],
+        "return-type": "json",
         "interval": 2
     }
 }
