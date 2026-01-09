@@ -44,7 +44,6 @@
             "custom/gpu",
             "cpu",
             "temperature",
-            "temperature#amd",
             "memory"
         ]
     },
@@ -130,14 +129,6 @@
     },
 
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "warning-threshold": 80,
-        "critical-threshold": 90,
-        "format": "{icon} {temperatureC} ",
-        "format-icons": ["", "", ""]
-    },
-    "temperature#amd": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp3_input",
         "warning-threshold": 80,
