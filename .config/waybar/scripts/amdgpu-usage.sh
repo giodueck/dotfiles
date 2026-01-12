@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 BUSY_P=$(cat /sys/class/drm/card1/device/gpu_busy_percent | sed 's/\n//')
 
