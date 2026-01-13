@@ -41,7 +41,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/nvidia",
-            "custom/gpu",
+            "custom/amdgpu",
             "cpu",
             "temperature",
             "memory"
@@ -307,7 +307,7 @@
     },
 
     "custom/nvidia": {
-        "exec-if": "nvidia-smi",
+        "exec-if": "which nvidia-smi >/dev/null",
         "exec": "~/.config/waybar/scripts/nvidiagpu-usage.sh",
         "format": "󰢮 {icon} ", // useful at a glance, like the cpu module
         "format-alt": "󰢮 {}%  {alt}% ", // more detail, for when doing compute tasks
@@ -325,8 +325,8 @@
         "interval": 2
     },
 
-    "custom/gpu": {
-        "exec-if": "cat /sys/class/drm/card1/device/gpu_busy_percent",
+    "custom/amdgpu": {
+        "exec-if": "cat /sys/class/drm/card1/device/gpu_busy_percent >/dev/null",
         "exec": "~/.config/waybar/scripts/amdgpu-usage.sh",
         "format": "󰢮 {icon} ", // useful at a glance, like the cpu module
         "format-alt": "󰢮 {}%  {alt}% ", // more detail, for when doing compute tasks

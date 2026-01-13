@@ -7,6 +7,6 @@ VRAM_TOTAL=$(($(cat /sys/class/drm/card1/device/mem_info_vram_total)/1024/1024))
 
 VRAM_P=$(bc <<< "scale=2; $({ cat /sys/class/drm/card1/device/mem_info_vram_used; echo -n '/ '; cat /sys/class/drm/card1/device/mem_info_vram_total; } | xargs) * 100" | sed "s/.00//" | sed 's/\n//')
 
-NAME=$(glxinfo | grep -i device | cut -d':' -f 2 | cut -d'(' -f 1 | sed 's/^ //')
+NAME=$(glxinfo | grep -i device | cut -d':' -f 2 | cut -d'(' -f 1 | xargs)
 
 echo '{"percentage":'$BUSY_P',"text":"'$BUSY_P'","alt":"'$VRAM_P'","tooltip":"'$NAME'\r'$BUSY_P'% '$VRAM_USED'MB/'$VRAM_TOTAL'MB"}'
