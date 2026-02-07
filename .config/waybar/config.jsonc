@@ -128,14 +128,6 @@
         "on-click-right": "killall rofi || ~/.local/bin/naivecalendar -t tokyonight -e 'alacritty -e nvim'"
     },
 
-    "temperature": {
-        // "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp3_input",
-        "warning-threshold": 80,
-        "critical-threshold": 90,
-        "format": "{icon} {temperatureC} ",
-        "format-icons": ["", "", ""]
-    },
     "memory": {
         "interval": 5,
         "format": " {percentage:>2}%",
