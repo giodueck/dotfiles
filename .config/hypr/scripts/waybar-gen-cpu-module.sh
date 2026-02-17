@@ -34,7 +34,7 @@
     echo '        "warning-threshold": 80,'
     echo '        "critical-threshold": 90,'
     echo '        "format": "{icon} {temperatureC} ",'
-    echo '        "format-icons": ["", "", ""]'
+    echo '        "format-icons": ["", "", "", ""]'
     echo '    }'
 
     echo '}'
