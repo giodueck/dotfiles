@@ -1,0 +1,21 @@
+include "%L"
+
+<Multi_key> <h> <h> : "─"
+<Multi_key> <v> <v> : "│"
+<Multi_key> <d> <r> : "┌"
+<Multi_key> <d> <l> : "┐"
+<Multi_key> <u> <r> : "└"
+<Multi_key> <u> <l> : "┘"
+<Multi_key> <v> <r> : "├"
+<Multi_key> <v> <l> : "┤"
+<Multi_key> <d> <h> : "┬"
+<Multi_key> <u> <h> : "┴"
+<Multi_key> <v> <h> : "┼"
+<Multi_key> <l> <l> : "╴"
+<Multi_key> <u> <u> : "╵"
+<Multi_key> <r> <r> : "╶"
+<Multi_key> <d> <d> : "╷"
+
+# Replace clobbered digrams:
+# <v> <r> is the same as <c> <r>, same as the other <v> <_> combinations
+# <u> <u> produces u with breve, whatever that is I don't use it

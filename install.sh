@@ -7,6 +7,8 @@
 
 cp -v .zshrc ~/.zshrc
 
+cp -v .XCompose ~/.XCompose
+
 mkdir -p ~/.local/share/fzf
 cp -v .local/share/fzf/key-bindings.zsh ~/.local/share/fzf/key-bindings.zsh
 
