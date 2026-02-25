@@ -1,5 +1,6 @@
 include "%L"
 
+# Box-drawing characters
 <Multi_key> <h> <h> : "─"
 <Multi_key> <v> <v> : "│"
 <Multi_key> <d> <r> : "┌"
@@ -15,6 +16,31 @@ include "%L"
 <Multi_key> <u> <u> : "╵"
 <Multi_key> <r> <r> : "╶"
 <Multi_key> <d> <d> : "╷"
+<Multi_key> <3> <minus> : "┄"
+<Multi_key> <3> <exclam> : "┆"
+<Multi_key> <3> <h> : "┄"
+<Multi_key> <3> <v> : "┆"
+
+# Bold/heavy box-drawing characters
+<Multi_key> <H> <H> : "━"
+<Multi_key> <V> <V> : "┃"
+<Multi_key> <D> <R> : "┏"
+<Multi_key> <D> <L> : "┓"
+<Multi_key> <U> <R> : "┗"
+<Multi_key> <U> <L> : "┛"
+<Multi_key> <V> <R> : "┣"
+<Multi_key> <V> <L> : "┫"
+<Multi_key> <D> <H> : "┳"
+<Multi_key> <U> <H> : "┻"
+<Multi_key> <V> <H> : "╋"
+<Multi_key> <L> <L> : "╸"
+<Multi_key> <U> <U> : "╹"
+<Multi_key> <R> <R> : "╺"
+<Multi_key> <D> <D> : "╻"
+<Multi_key> <3> <underscore> : "┅"
+<Multi_key> <3> <slash> : "┇"
+<Multi_key> <3> <H> : "┅"
+<Multi_key> <3> <V> : "┇"
 
 # Replace clobbered digrams:
 # <v> <r> is the same as <c> <r>, same as the other <v> <_> combinations
