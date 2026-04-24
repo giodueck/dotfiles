@@ -128,3 +128,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Disable Ctrl-S + Ctrl-Q stopping and restarting output
 setopt noflowcontrol
+
+# Arch repos have some other binary as 'task', I want the Taskfile runner
+alias task=go-task
