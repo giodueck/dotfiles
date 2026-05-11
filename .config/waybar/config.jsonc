@@ -239,7 +239,7 @@
     "custom/lock": {
         "format": "",
         "tooltip-format": "Lock",
-        "on-click": "hyprlock --immediate"
+        "on-click": "hyprlock"
     },
     "custom/exit": {
         "format": "󰭑",
