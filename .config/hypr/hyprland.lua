@@ -321,7 +321,7 @@ hl.gesture({
 hl.device({
     -- Any receiver mouse technically, but in this case for the M575 Trackball
     name = "logitech-usb-receiver-mouse",
-    sensitivity = -0.1,
+    sensitivity = -0.2,
     accel_profile = "adaptive",
 
     scroll_method = "on_button_down",
