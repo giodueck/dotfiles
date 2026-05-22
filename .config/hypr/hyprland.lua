@@ -391,8 +391,8 @@ end
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.layout("swapcol l"))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.layout("swapcol r"))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.layout("swapcol l"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.layout("swapcol r"))
 
 -- Resize column to one of the predefined values
 hl.bind(mainMod .. " + Left", hl.dsp.layout("colresize -conf"))
