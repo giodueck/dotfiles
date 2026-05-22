@@ -486,10 +486,10 @@ hl.define_submap("Leader", function()
             "grim -g \"$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1) $(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)\" \"$HOME/Pictures/Windowshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot of active window taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Windowshot | sort | tail -n 1)\""))
 
     -- Restart waybar
-    hl.bind("W", hl.dsp.exec_cmd("killall waybar; ~/.config/hypr/scripts/waybar-dynamic-config.sh && waybar &!"))
+    hl.bind("ALT + W", hl.dsp.exec_cmd("killall waybar; ~/.config/hypr/scripts/waybar-dynamic-config.sh && waybar &!"))
 
     -- Reload all eww widgets
-    hl.bind("E", hl.dsp.exec_cmd("~/.config/hypr/scripts/eww-open-all.sh"))
+    hl.bind("ALT + E", hl.dsp.exec_cmd("~/.config/hypr/scripts/eww-open-all.sh"))
 
     -- The flags make it possible to just tap SUPER again to reset the submap
     hl.bind("catchall", hl.dsp.submap("reset"), { release = true, ignore_mods = true })
