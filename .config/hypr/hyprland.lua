@@ -409,13 +409,13 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Multimedia keys for volume control
 hl.bind("XF86AudioRaiseVolume",
     hl.dsp.exec_cmd(
-        "bash -c \"[[ $(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | cut -d / -f 2 | cut -d % -f 1) -lt 100 ]] && pactl set-sink-volume @DEFAULT_SINK@ +5%\"; paplay /usr/share/sounds/ocean/stereo/audio-volume-change.oga; notify-send -a \"Volume\" -t 1500 \"Volume\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | cut -d / -f 2)\" -p -r $(cat /tmp/volume-notif-id || echo -n 0) > /tmp/volume-notif-id"),
+        "bash -c \"wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+\"; paplay /usr/share/sounds/ocean/stereo/audio-volume-change.oga; notify-send -a \"Volume\" -t 1500 \"Volume\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | cut -d / -f 2)\" -p -r $(cat /tmp/volume-notif-id || echo -n 0) > /tmp/volume-notif-id"),
     { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume",
     hl.dsp.exec_cmd(
-        "pactl set-sink-volume @DEFAULT_SINK@ -5%; paplay /usr/share/sounds/ocean/stereo/audio-volume-change.oga; notify-send -a \"Volume\" -t 1500 \"Volume\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | cut -d / -f 2)\" -p -r $(cat /tmp/volume-notif-id || echo -n 0) > /tmp/volume-notif-id"),
+        "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-; paplay /usr/share/sounds/ocean/stereo/audio-volume-change.oga; notify-send -a \"Volume\" -t 1500 \"Volume\" \"$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | cut -d / -f 2)\" -p -r $(cat /tmp/volume-notif-id || echo -n 0) > /tmp/volume-notif-id"),
     { locked = true, repeating = true })
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd("pactl set-sink-mute @DEFAULT_SINK@ toggle"),
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
     { locked = true, repeating = true })
 
 -- Screen brightness (laptop)
