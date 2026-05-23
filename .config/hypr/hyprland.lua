@@ -329,7 +329,7 @@ hl.device({
     accel_profile = "adaptive",
 
     scroll_method = "on_button_down",
-    scroll_button = 274,
+    scroll_button = 275,
 })
 
 
