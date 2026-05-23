@@ -232,6 +232,10 @@ hl.config({
         workspace_back_and_forth = true,
         hide_special_on_workspace_change = true,
     },
+
+    cursor = {
+        no_warps = true,
+    },
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
