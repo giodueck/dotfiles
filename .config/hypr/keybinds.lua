@@ -126,39 +126,77 @@ hl.bind(mainMod .. " + S",
 hl.bind(mainMod .. " + SUPER_L", hl.dsp.submap("Leader"), { release = true, ignore_mods = true })
 
 hl.define_submap("Leader", function()
-    -- Launch the application menu
-    hl.bind("Space", hl.dsp.exec_cmd(menu))
-
-    -- Control menus
-    hl.bind("Q", hl.dsp.exec_cmd(powerMenu))
-    hl.bind("B", hl.dsp.exec_cmd(bluetoothMenu))
-    hl.bind("W", hl.dsp.exec_cmd(wifiMenu))
-    hl.bind("N", hl.dsp.exec_cmd("swaync-client -t -sw"))
-
-    -- Lock
-    hl.bind("ALT + L", hl.dsp.exec_cmd("killall hyprlock; hyprlock"))
+    -- These first binds do not immediately exit the submap
 
     -- Move to the next *numerical* workspace
     hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "r+1" }), { repeating = true })
     hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "r-1" }))
 
+    -- These next binds first execute their function, then exit the submap
+
+    -- Launch the application menu
+    hl.bind("Space", function()
+        hl.dispatch(hl.dsp.exec_cmd(menu))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+
+    -- Control menus
+    hl.bind("Q", function()
+        hl.dispatch(hl.dsp.exec_cmd(powerMenu))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+    hl.bind("B", function()
+        hl.dispatch(hl.dsp.exec_cmd(bluetoothMenu))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+    hl.bind("W", function()
+        hl.dispatch(hl.dsp.exec_cmd(wifiMenu))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+    hl.bind("N", function()
+        hl.dispatch(hl.dsp.exec_cmd("swaync-client -t -sw"))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+
+    -- Lock
+    hl.bind("ALT + L", function()
+        hl.dispatch(hl.dsp.exec_cmd("killall hyprlock; hyprlock"))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+
     -- Center floating window
-    hl.bind("C", hl.dsp.window.center())
+    hl.bind("C", function()
+        hl.dispatch(hl.dsp.window.center())
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
 
     -- Screenshots
     -- screen
     hl.bind("S",
-        hl.dsp.exec_cmd(
-            "grim \"$HOME/Pictures/Screenshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Screenshot | sort | tail -n 1)\""))
+        function()
+            hl.dispatch(hl.dsp.exec_cmd(
+                "grim \"$HOME/Pictures/Screenshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Screenshot | sort | tail -n 1)\""))
+            hl.dispatch(hl.dsp.submap("reset"))
+        end)
     hl.bind("SHIFT + S",
-        hl.dsp.exec_cmd(
-            "grim -g \"$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1) $(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)\" \"$HOME/Pictures/Windowshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot of active window taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Windowshot | sort | tail -n 1)\""))
+        function()
+            hl.dispatch(hl.dsp.exec_cmd(
+                "grim -g \"$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1) $(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)\" \"$HOME/Pictures/Windowshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot of active window taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Windowshot | sort | tail -n 1)\""))
+            hl.dispatch(hl.dsp.submap("reset"))
+        end)
 
     -- Restart waybar
-    hl.bind("ALT + W", hl.dsp.exec_cmd("killall waybar; ~/.config/hypr/scripts/waybar-dynamic-config.sh && waybar &!"))
+    hl.bind("ALT + W",
+        function()
+            hl.dispatch(hl.dsp.exec_cmd("killall waybar; ~/.config/hypr/scripts/waybar-dynamic-config.sh && waybar &!"))
+            hl.dispatch(hl.dsp.submap("reset"))
+        end)
 
     -- Reload all eww widgets
-    hl.bind("ALT + E", hl.dsp.exec_cmd("~/.config/hypr/scripts/eww-open-all.sh"))
+    hl.bind("ALT + E", function()
+        hl.dispatch(hl.dsp.exec_cmd("~/.config/hypr/scripts/eww-open-all.sh"))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
 
     -- The flags make it possible to just tap SUPER again to reset the submap
     hl.bind("catchall", hl.dsp.submap("reset"), { release = true, ignore_mods = true })
