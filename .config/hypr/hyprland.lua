@@ -132,6 +132,13 @@ hl.env("GDK_BACKEND", "wayland,x11,*")
 
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "wayland")
 
+---------------------------
+-- Host-specific configs --
+---------------------------
+
+-- Create an empty "include.lua" file if no specific configs are needed.
+require("conf.include")
+
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
