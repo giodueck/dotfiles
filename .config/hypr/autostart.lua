@@ -30,4 +30,10 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false &")
 
     hl.exec_cmd("~/.config/hypr/scripts/event-handler.sh &")
+
+    -- GTK theming
+    -- GTK3
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Tokyonight-Dark-Storm:dark\"")
+    -- GTK4
+    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
 end)
