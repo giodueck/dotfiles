@@ -104,7 +104,27 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(clipboardManager))
 
 -- Zen mode
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("killall waybar -SIGUSR1"))
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-zen.sh"))
+hl.bind(mainMod .. " + Z", function()
+    local zen_mode = (hl.get_config("animations.enabled") == false)
+
+    if zen_mode then
+        hl.exec_cmd("hyprctl reload")
+        return
+    end
+
+    hl.config({
+        general = {
+            border_size = 0,
+            gaps_in = 0,
+            gaps_out = 0,
+        },
+        animations = { enabled = false },
+        decoration = {
+            rounding = 0,
+            inactive_opacity = 1
+        },
+    })
+end)
 
 -- Multi-monitor
 hl.bind(mainMod .. " + I", hl.dsp.workspace.move({ monitor = "+1" }))
