@@ -28,26 +28,28 @@ hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("systemctl suspend"), { locked =
 
 -- Lock such that, even when the lockscreen dies, it can be relaunched
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("killall hyprlock; hyprlock"), { locked = true })
-hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("killall hyprlock; hyprlock"), { locked = true })
 
 -- Move focus with mainMod + HL
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 
--- TODO: buggy
 -- Cycle windows, useful when there is a mix of floating and tiled, or when multimonitor wants to focus a neighboring workspace instead of the next window
+-- -- these don't work like they used to <0.55
 -- hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.cycle_next({ prev = true }))
 -- hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.alter_zorder({ mode = "top" }))
 -- hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.cycle_next())
 -- hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.alter_zorder({ mode = "top" }))
 
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.layout("focus l"))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.layout("focus r"))
+
 -- Move to previous/next workspace with mainMod + JK
 hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "m-1" }))
 
--- Focus on last focused window
-hl.bind(mainMod .. " + ALT + TAB", hl.dsp.focus({ last = true }))
-hl.bind(mainMod .. " + ALT + TAB", hl.dsp.window.alter_zorder({ mode = "top" }))
+-- Cycle windows
+hl.bind("ALT + TAB", hl.dsp.window.cycle_next())
+hl.bind("ALT + TAB", hl.dsp.window.alter_zorder({ mode = "top" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
