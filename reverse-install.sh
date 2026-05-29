@@ -22,7 +22,7 @@ cp -v ~/.config/zathura/zathurarc .config/zathura/zathurarc
 mkdir -p .config/hypr
 cp -rv ~/.config/hypr/* .config/hypr/
 cp -rv ~/.config/hypr/.* .config/hypr/
-rm .config/hypr/local.lua
+rm .config/hypr/modules/local.lua
 
 mkdir -p .config/xdg-desktop-portal
 cp -v ~/.config/xdg-desktop-portal/hyprland-portals.conf .config/xdg-desktop-portal/hyprland-portals.conf

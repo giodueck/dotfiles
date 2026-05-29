@@ -1,2 +1,2 @@
 .config/waybar/cpu.jsonc
-.config/hypr/local.lua
+.config/hypr/modules/local.lua

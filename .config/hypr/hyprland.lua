@@ -19,34 +19,16 @@ hl.monitor({
     scale    = "auto",
 })
 
--- Include specific monitor configs in local.lua
+---
 
----------------------
----- MY PROGRAMS ----
----------------------
-
-require("programs")
-
--------------------
----- AUTOSTART ----
--------------------
-
-require("autostart")
-
--------------------------------
----- ENVIRONMENT VARIABLES ----
--------------------------------
-
-require("environment")
-
----------------------------
--- Host-specific configs --
----------------------------
+require("modules.programs")
+require("modules.autostart")
+require("modules.environment")
 
 -- Set configs specific to a certain machine, like monitor configs, that differ from the default.
 --
 -- Create an empty "local.lua" file if no specific configs are needed.
-require("local")
+require("modules.local")
 
 -----------------------
 ----- PERMISSIONS -----
@@ -58,33 +40,11 @@ require("local")
 -- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
 -- for security reasons
 
------------------------
----- LOOK AND FEEL ----
------------------------
+---
 
-require("looks")
-require("behavior")
-
-----------------
----- LAYOUT ----
-----------------
-
-require("layout")
-
----------------
----- INPUT ----
----------------
-
-require("input")
-
-------------------
----- KEYBINDS ----
-------------------
-
-require("keybinds")
-
---------------------------------
----- WINDOWS AND WORKSPACES ----
---------------------------------
-
-require("rules")
+require("modules.looks")
+require("modules.behavior")
+require("modules.layout")
+require("modules.input")
+require("modules.keybinds")
+require("modules.rules")
