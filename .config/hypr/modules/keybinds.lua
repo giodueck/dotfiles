@@ -13,8 +13,6 @@ hl.bind(mainMod .. " + Delete", hl.dsp.exit())
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(terminalAlt))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(windowSwitcher))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(browser2))
@@ -58,6 +56,13 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
+
+-- Switch to workspaces 1-5 with mainMod + ASDFG
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = 1 }))
+hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = 2 }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = 3 }))
+hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 4 }))
+hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
 
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
@@ -134,12 +139,6 @@ hl.bind(mainMod .. " + SHIFT + I", hl.dsp.workspace.swap_monitors({ monitor1 = "
 -- Calculator
 hl.bind(mainMod .. " + Comma", hl.dsp.exec_cmd("qalculate-qt"))
 
--- Screenshot with selection
-hl.bind(mainMod .. " + S",
-    hl.dsp.exec_cmd(
-        "killall slurp || grim -g \"$(slurp)\" \"$HOME/Pictures/Snip_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && wl-copy < \"$HOME/Pictures/Snip_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot taken and copied to clipboard\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Snip | sort | tail -n 1)\""))
--- More variants in Leader submap
-
 
 -- Submaps!
 -- Mimic Neovim's leader or Tmux's prefix key scheme to create keybind sequences
@@ -167,15 +166,15 @@ hl.define_submap("Leader", function()
         hl.dispatch(hl.dsp.exec_cmd(powerMenu))
         hl.dispatch(hl.dsp.submap("reset"))
     end)
-    hl.bind("B", function()
+    hl.bind(mainMod .. " + B", function()
         hl.dispatch(hl.dsp.exec_cmd(bluetoothMenu))
         hl.dispatch(hl.dsp.submap("reset"))
     end)
-    hl.bind("W", function()
+    hl.bind(mainMod .. " + W", function()
         hl.dispatch(hl.dsp.exec_cmd(wifiMenu))
         hl.dispatch(hl.dsp.submap("reset"))
     end)
-    hl.bind("N", function()
+    hl.bind(mainMod .. " + N", function()
         hl.dispatch(hl.dsp.exec_cmd("swaync-client -t -sw"))
         hl.dispatch(hl.dsp.submap("reset"))
     end)
@@ -187,20 +186,38 @@ hl.define_submap("Leader", function()
     end)
 
     -- Center floating window
-    hl.bind("C", function()
+    hl.bind(mainMod .. " + C", function()
         hl.dispatch(hl.dsp.window.center())
         hl.dispatch(hl.dsp.submap("reset"))
     end)
 
+    -- Toggle tiled and fullscreen
+    hl.bind("F", function()
+        hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+    hl.bind("SHIFT + F", function()
+        hl.dispatch(hl.dsp.window.fullscreen({ action = "toggle" }))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+
     -- Screenshots
-    -- screen
+    -- Selection
     hl.bind("S",
+        function()
+            hl.dispatch(hl.dsp.exec_cmd(
+                "killall slurp || grim -g \"$(slurp)\" \"$HOME/Pictures/Snip_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && wl-copy < \"$HOME/Pictures/Snip_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot taken and copied to clipboard\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Snip | sort | tail -n 1)\""))
+            hl.dispatch(hl.dsp.submap("reset"))
+        end)
+    -- Screen
+    hl.bind("SHIFT + S",
         function()
             hl.dispatch(hl.dsp.exec_cmd(
                 "grim \"$HOME/Pictures/Screenshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Screenshot | sort | tail -n 1)\""))
             hl.dispatch(hl.dsp.submap("reset"))
         end)
-    hl.bind("SHIFT + S",
+    -- Active window
+    hl.bind("CTRL + S",
         function()
             hl.dispatch(hl.dsp.exec_cmd(
                 "grim -g \"$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1) $(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)\" \"$HOME/Pictures/Windowshot_$(date +%Y%m%d_%Hh%Mm%Ss).png\" && notify-send -t 3000 \"Screenshot of active window taken\" -i \"$HOME/Pictures/$(ls ~/Pictures | grep Windowshot | sort | tail -n 1)\""))
