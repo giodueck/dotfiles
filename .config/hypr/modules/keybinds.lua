@@ -61,11 +61,12 @@ for i = 1, 10 do
 end
 
 -- Switch to workspaces 1-5 with mainMod + ASDFG
-hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = 1 }))
-hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = 2 }))
-hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = 3 }))
-hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 4 }))
-hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
+local ws_binds = { "A", "S", "D", "F", "G" }
+for i = 1, #ws_binds do
+    local key = ws_binds[i]
+    hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+    hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+end
 
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
