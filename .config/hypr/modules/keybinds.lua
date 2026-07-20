@@ -1,3 +1,6 @@
+local helpers = require('modules.helpers')
+local printTable = helpers.printTable
+
 ------------------
 ---- KEYBINDS ----
 ------------------
@@ -198,6 +201,21 @@ hl.define_submap("Leader", function()
     end)
     hl.bind("SHIFT + F", function()
         hl.dispatch(hl.dsp.window.fullscreen({ action = "toggle" }))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+
+    -- Toggle current window between full column width and half
+    hl.bind("Z", function()
+        local layout = hl.get_active_window().layout
+        if (layout ~= nil and layout.column.width == 1.0) then
+            hl.dispatch(hl.dsp.layout("colresize 0.5"))
+            -- this is so an empty space won't be left of the right of a window
+            -- (if the active window is the right-most window)
+            hl.dispatch(hl.dsp.layout("focus left"))
+            hl.dispatch(hl.dsp.layout("focus right"))
+        else
+            hl.dispatch(hl.dsp.layout("colresize 1.0"))
+        end
         hl.dispatch(hl.dsp.submap("reset"))
     end)
 
