@@ -7,8 +7,25 @@ local printTable = helpers.printTable
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
+local function kill_or_minimize(window)
+    if window.class == "Steam" then
+        hl.dispatch(hl.dsp.exec_cmd("xdotool getactivewindow windowunmap"))
+    else
+        hl.dispatch(hl.dsp.window.close({ window = window }))
+    end
+end
+
 -- Close window
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("~/.config/hypr/scripts/kill-or-minimize.sh"))
+hl.bind(mainMod .. " + Q", function() kill_or_minimize(hl.get_active_window()) end)
+
+-- Close all windows in the current workspace
+hl.bind(mainMod .. " + SHIFT + Q", function()
+    local windows = hl.get_workspace_windows(hl.get_active_workspace())
+
+    for _, value in pairs(windows) do
+        kill_or_minimize(value)
+    end
+end)
 
 -- Exit Hyprland
 hl.bind(mainMod .. " + Delete", hl.dsp.exit())
@@ -61,12 +78,11 @@ for i = 1, 10 do
 end
 
 -- Switch to workspaces 1-5 with mainMod + ASDFG
-local ws_binds = { "A", "S", "D", "F", "G" }
-for i = 1, #ws_binds do
-    local key = ws_binds[i]
-    hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-    hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
-end
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = 1 }))
+hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = 2 }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = 3 }))
+hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 4 }))
+hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
 
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
