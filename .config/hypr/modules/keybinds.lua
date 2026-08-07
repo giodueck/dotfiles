@@ -52,14 +52,14 @@ hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 
 -- Cycle windows, useful when there is a mix of floating and tiled, or when multimonitor wants to focus a neighboring workspace instead of the next window
--- -- these don't work like they used to <0.55
--- hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.cycle_next({ prev = true }))
--- hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.alter_zorder({ mode = "top" }))
--- hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.cycle_next())
--- hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.alter_zorder({ mode = "top" }))
-
-hl.bind(mainMod .. " + CTRL + H", hl.dsp.layout("focus l"))
-hl.bind(mainMod .. " + CTRL + L", hl.dsp.layout("focus r"))
+hl.bind(mainMod .. " + CTRL + H", function()
+    hl.dispatch(hl.dsp.window.cycle_next({ next = true }))
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
+end)
+hl.bind(mainMod .. " + CTRL + L", function ()
+    hl.dispatch(hl.dsp.window.cycle_next({ next = false }))
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
+end)
 
 -- Move to previous/next workspace with mainMod + JK
 hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "m+1" }))
