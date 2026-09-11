@@ -66,8 +66,10 @@ hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "m-1" }))
 
 -- Cycle windows
-hl.bind("ALT + TAB", hl.dsp.window.cycle_next())
-hl.bind("ALT + TAB", hl.dsp.window.alter_zorder({ mode = "top" }))
+hl.bind("ALT + TAB", function ()
+    hl.dispatch(hl.dsp.window.cycle_next())
+    hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
+end)
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -87,8 +89,14 @@ hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.layout("swapcol l"))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.layout("swapcol r"))
+hl.bind(mainMod .. " + SHIFT + H", function ()
+    hl.dispatch(hl.dsp.layout("expel"))
+    hl.dispatch(hl.dsp.layout("swapcol l"))
+end)
+hl.bind(mainMod .. " + SHIFT + L", function ()
+    hl.dispatch(hl.dsp.layout("expel"))
+    hl.dispatch(hl.dsp.layout("swapcol r"))
+end)
 
 -- Resize column to one of the predefined values
 hl.bind(mainMod .. " + Left", hl.dsp.layout("colresize -conf"))
