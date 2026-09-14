@@ -99,7 +99,21 @@
             "default": ""
         },
         "show-special": true,
-        "special-visible-only": true
+        "special-visible-only": true,
+        "tooltip": true,
+        "format-window-separator": ", ",
+        "tooltips": {
+            "default": "{name}: {windows}",
+            "empty": ""
+        },
+        "window-rewrite-default": "{}",
+        "window-rewrite": {
+            "class<firefox>": "Firefox",
+            "class<chromium>": "Chromium",
+            "title<.*Teams.*>": "Teams",
+            "title<.*Odoo.*>": "Odoo",
+            "class<Alacritty>": "Alacritty"
+        }
     },
     "hyprland/window": {
         "format": "CLASS:{class} _-_-_ {title}",
@@ -111,6 +125,7 @@
             "(.*)Mozilla Firefox": "Firefox",
             "(.*) - Chromium": "Chromium",
             "(.*) Microsoft Teams": "Teams",
+            "Odoo.*": "Odoo",
             "(.*)Alacritty (.*)": "Alacritty",
             "CLASS:(.* _-_-_ )(.*)": "$2"
         }
