@@ -60,6 +60,11 @@ punch() {
     echo "done"
 }
 
+# Ring the bell. && with a long running task to get notified when it ends
+bel() {
+    tput bel
+}
+
 # Git shortcuts
 alias gs="git status"
 alias ga="git add"
