@@ -27,7 +27,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("wl-paste --type text --watch cliphist store &")
     hl.exec_cmd("wl-paste --type image --watch cliphist store &")
 
-    hl.exec_cmd("ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false &")
+    -- hl.exec_cmd("ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false &")
 
     hl.exec_cmd("~/.config/hypr/scripts/event-handler.sh &")
 
@@ -36,4 +36,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Tokyonight-Dark-Storm:dark\"")
     -- GTK4
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
+
+    hl.exec_cmd("netbird-ui &")
 end)
