@@ -86,6 +86,13 @@ hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = 3 }))
 hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 4 }))
 hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
 
+-- Move to workspaces 1-5 with mainMod + SHIFT + ASDFG
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = 1 }))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = 2 }))
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = 3 }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.move({ workspace = 4 }))
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.move({ workspace = 5 }))
+
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
