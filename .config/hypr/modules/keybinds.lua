@@ -80,18 +80,18 @@ for i = 1, 10 do
 end
 
 -- Switch to workspaces 1-5 with mainMod + ASDFG
-hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = 1 }))
-hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = 2 }))
+hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 1 }))
+hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 2 }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = 3 }))
-hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 4 }))
-hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
+hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = 4 }))
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = 5 }))
 
 -- Move to workspaces 1-5 with mainMod + SHIFT + ASDFG
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = 1 }))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = 2 }))
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.move({ workspace = 1 }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.move({ workspace = 2 }))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = 3 }))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.move({ workspace = 4 }))
-hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.move({ workspace = 5 }))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = 4 }))
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = 5 }))
 
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
@@ -286,6 +286,14 @@ hl.define_submap("Leader", function()
         hl.dispatch(hl.dsp.exec_cmd("~/.config/hypr/scripts/eww-open-all.sh"))
         hl.dispatch(hl.dsp.submap("reset"))
     end)
+
+    -- Debug
+    -- hl.bind("I", function ()
+    --     window = hl.get_active_window()
+    --     initial_title = window.initial_title
+    --     hl.notification.create({text = "debug: " .. initial_title, timeout = 5000})
+    --     hl.dispatch(hl.dsp.submap("reset"))
+    -- end)
 
     -- The flags make it possible to just tap SUPER again to reset the submap
     hl.bind("catchall", hl.dsp.submap("reset"), { release = true, ignore_mods = true })
