@@ -27,7 +27,7 @@ cwdsize() {
 
 # Human-readable size of contents in given directory
 dirsize() {
-    pushd "$1" > /dev/null
+    pushd "$1" > /dev/null || return
     cwdsize
     popd > /dev/null
 }
