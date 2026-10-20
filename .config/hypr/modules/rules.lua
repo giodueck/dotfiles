@@ -45,3 +45,16 @@ hl.window_rule({
     size = { "(monitor_w*0.3)", "(monitor_h*0.8)" },
     move = { "(monitor_w*0.6)", "(monitor_h*0.05)" },
 })
+
+-- New teams always creates a new chromium window for its PiP while in calls.
+-- This makes it float off to the bottom right corner.
+hl.window_rule({
+    name = "teams-pip",
+    match = {
+        class = "^chromium$",
+        title = "^Microsoft Teams.*$",
+    },
+    float = true,
+    size = { "(monitor_w*0.2)", "(monitor_h*0.3)" },
+    move = { "(monitor_w*0.8)", "(monitor_h*0.7)" },
+})
