@@ -56,7 +56,7 @@ hl.bind(mainMod .. " + CTRL + H", function()
     hl.dispatch(hl.dsp.window.cycle_next({ next = true }))
     hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
 end)
-hl.bind(mainMod .. " + CTRL + L", function ()
+hl.bind(mainMod .. " + CTRL + L", function()
     hl.dispatch(hl.dsp.window.cycle_next({ next = false }))
     hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
 end)
@@ -66,7 +66,7 @@ hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "m-1" }))
 
 -- Cycle windows
-hl.bind("ALT + TAB", function ()
+hl.bind("ALT + TAB", function()
     hl.dispatch(hl.dsp.window.cycle_next())
     hl.dispatch(hl.dsp.window.alter_zorder({ mode = "top" }))
 end)
@@ -96,11 +96,11 @@ hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = 5 }))
 -- Move window
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ workspace = "+1" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ workspace = "-1" }))
-hl.bind(mainMod .. " + SHIFT + H", function ()
+hl.bind(mainMod .. " + SHIFT + H", function()
     hl.dispatch(hl.dsp.layout("expel"))
     hl.dispatch(hl.dsp.layout("swapcol l"))
 end)
-hl.bind(mainMod .. " + SHIFT + L", function ()
+hl.bind(mainMod .. " + SHIFT + L", function()
     hl.dispatch(hl.dsp.layout("expel"))
     hl.dispatch(hl.dsp.layout("swapcol r"))
 end)
@@ -179,13 +179,20 @@ hl.bind(mainMod .. " + Comma", hl.dsp.exec_cmd("qalculate-qt"))
 -- Mimic Neovim's leader or Tmux's prefix key scheme to create keybind sequences
 
 -- Leader key will be SUPER (pressed and released by itself)
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.submap("Leader"), { release = true, ignore_mods = true })
+-- Press again to toggle back to reset submap
+hl.bind("SUPER_L", function()
+    if hl.get_current_submap() == "Leader" then
+        hl.dispatch(hl.dsp.submap("reset"))
+    else
+        hl.dispatch(hl.dsp.submap("Leader"))
+    end
+end, { release = true, ignore_mods = true, submap_universal = true })
 
 hl.define_submap("Leader", function()
     -- These first binds do not immediately exit the submap
 
     -- Move to the next *numerical* workspace
-    hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "r+1" }), { repeating = true })
+    hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "r+1" }))
     hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "r-1" }))
 
     -- These next binds first execute their function, then exit the submap
@@ -295,6 +302,5 @@ hl.define_submap("Leader", function()
     --     hl.dispatch(hl.dsp.submap("reset"))
     -- end)
 
-    -- The flags make it possible to just tap SUPER again to reset the submap
-    hl.bind("catchall", hl.dsp.submap("reset"), { release = true, ignore_mods = true })
+    hl.bind("catchall", hl.dsp.submap("reset"), { release = true })
 end)

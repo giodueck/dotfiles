@@ -2,12 +2,6 @@
 ---- WORKSPACES ----
 --------------------
 
--- Scratchpad
-hl.workspace_rule({
-    workspace = "special:scratch",
-    on_created_empty = "[float; size (monitor_w*0.5) (monitor_h*0.6); center] " .. terminal,
-})
-
 -----------------
 ---- WINDOWS ----
 -----------------
