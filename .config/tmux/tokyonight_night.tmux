@@ -35,5 +35,7 @@ set -g @prefix_highlight_output_prefix "#[fg=#ffc777]#[bg=#1e2030]#[fg=#1e203
 set -g @prefix_highlight_output_suffix ""
 
 ### Custom
-#1a1b26
 set -g window-active-style "bg=#1a1b26"
+
+set -g popup-style "fg=#82aaff,bg=#1a1b26"
+set -g popup-border-style "fg=#82aaff,bg=#1a1b26"
