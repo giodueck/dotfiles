@@ -282,11 +282,16 @@ hl.define_submap("Leader", function()
         end)
 
     -- Restart waybar
-    hl.bind("ALT + W",
-        function()
-            hl.dispatch(hl.dsp.exec_cmd("killall waybar; ~/.config/hypr/scripts/waybar-dynamic-config.sh && waybar &!"))
-            hl.dispatch(hl.dsp.submap("reset"))
-        end)
+    hl.bind("ALT + W", function()
+        hl.dispatch(hl.dsp.exec_cmd("killall waybar; ~/.config/hypr/scripts/waybar-dynamic-config.sh && waybar &!"))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
+
+    -- Toggle waybar idle inhibitor
+    hl.bind("I", function()
+        hl.dispatch(hl.dsp.exec_cmd("pkill -SIGRTMIN+6 waybar"))
+        hl.dispatch(hl.dsp.submap("reset"))
+    end)
 
     -- Reload all eww widgets
     hl.bind("ALT + E", function()

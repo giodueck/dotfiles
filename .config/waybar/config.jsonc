@@ -318,7 +318,8 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        }
+        },
+        "signal": 6
     },
 
     "custom/nvidia": {
